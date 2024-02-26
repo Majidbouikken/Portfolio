@@ -1,3 +1,4 @@
+import ThreeJsTest from './ThreeJsTest';
 import logo from './logo.svg';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         >
           Learn React
         </a>
+        <ThreeJsTest />
       </header>
     </div>
   );
