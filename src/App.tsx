@@ -1,24 +1,16 @@
-import ThreeJsTest from './ThreeJsTest';
-import logo from './logo.svg';
+import { Outlet } from 'react-router-dom';
+import NavBar from './layout/NavBar';
+import Availability from './components/Availability';
+import Settings from './components/Settings';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header bg-amber-500">
-        <img src={logo} className="h-32 w-32" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <ThreeJsTest />
-      </header>
+    <div>
+      <NavBar />
+      <Availability isAvailable={true} />
+      <Settings />
+      <Outlet />
+      <footer></footer>
     </div>
   );
 }
