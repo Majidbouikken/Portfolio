@@ -13,10 +13,22 @@ const WorksPage: React.FC = () => {
             <div className="flex flex-col items-baseline gap-8">
                 <h1 className="text-6xl max-w-5xl">Here you can find all my works and projects</h1>
                 <div className="flex flex-row gap-4 text-2xl">
-                    <a onClick={e => setSelectedCategory("All")} className="text-white/50 hover:text-white focus:text-primary-500 cursor-pointer transition-colors duration-500" style={{color: selectedCategory === "All"? '#4746eb': ''}}>All</a>
+                    <a
+                    key={0}
+                    onClick={e => setSelectedCategory("All")}
+                    className="text-white/50 hover:text-white focus:text-primary-500 transition-colors duration-500"
+                    style={selectedCategory === "All"? {color: '#4746eb', cursor: 'default'}: {cursor: 'pointer'}}>
+                        All
+                    </a>
                     { (Object.keys(Category).filter(key => isNaN!(Number(key))) as (keyof typeof Category)[]).map(
                         category => (
-                            <a key={category} onClick={e => setSelectedCategory(Category[category as keyof typeof Category])} className="text-white/50 hover:text-white focus:text-primary-500 cursor-pointer transition-colors duration-500" style={{ color: Category[selectedCategory as number] === category.toString() ? '#4746eb' : ''}}>{category}</a>
+                            <a
+                            key={category}
+                            onClick={e => setSelectedCategory(Category[category as keyof typeof Category])}
+                            className="text-white/50 hover:text-white focus:text-primary-500 cursor-pointer transition-colors duration-500"
+                            style={Category[selectedCategory as number] === category.toString()? {color: '#4746eb', cursor: 'default'}: {cursor: 'pointer'}}>
+                                {category}
+                            </a>
                         )
                     ) }
                 </div>
