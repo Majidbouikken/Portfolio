@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background-color: black;
+  background-color: theme('colors.background.50');
   color: azure;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -13,7 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }.dark body {
   font-family: var(--font-family-sans);
-  background-color: theme('colors.background.800');
+  background-color: theme('colors.background.950');
   color: theme('colors.text.50');
 }
 

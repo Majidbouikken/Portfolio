@@ -31,16 +31,17 @@ module.exports = {
           900: '#1e293b', // Light primary-text-color
         },
         'background': {
-          50: '#ffffff', // Light card color
-          100: '#f8f8f8',
-          200: '#f1f1f1', // Light background
-          300: '#e7e7e7', // Light deep background
-          400: '#d7d7d7',
-          500: '#6b6b6b',
-          600: '#575757',
-          700: '#393939', // Dark card color
-          800: '#191919', // Dark background
-          900: '#000000', // Dark deap background
+          50: '#f9fafb', // Light card color
+          100: '#f3f4f6',
+          200: '#e5e7eb', // Light background
+          300: '#d1d5db', // Light deep background
+          400: '#9ca3af',
+          500: '#6b7280',
+          600: '#4b5563',
+          700: '#374151', // Dark card color
+          800: '#1f2937', // Dark background
+          900: '#111827', // Dark deap background
+          950: '#020617',
         },
       },
       animation: {

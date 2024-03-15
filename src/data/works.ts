@@ -110,7 +110,7 @@ export const works: WorkType[] = [
         roles: ["Game Developer", "Game Artist"],
         collaborators: ["Peter Abreu", "Mykola Dolhyi"],
         company: null,
-        link: null,
+        link: 'https://github.com/yuriymacdev/JunctionPain2020',
         date: new Date(2020, 11),
         description: "This mobile app was fully built with Flutter. The UI was not planned before with an XD or Figma prototype and it was improvized directly in Flutter.",
         content: painpaingoawayContent,
