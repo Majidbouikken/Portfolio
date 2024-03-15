@@ -9,6 +9,8 @@ import WorksPage from './pages/WorksPage';
 import AboutPage from './pages/AboutPage';
 import HireMePage from './pages/HireMePage';
 import ForFunPage from './pages/ForFunPage';
+import WorkDetailsPage from './pages/WorkDetailsPage';
+import { workDetailsLoader } from './services/WorkService';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,11 @@ const router = createBrowserRouter([
       {
         path: "works",
         element: <WorksPage />,
+      },
+      {
+        path: ":title",
+        element: <WorkDetailsPage />,
+        loader: workDetailsLoader,
       },
       {
         path: "about",
@@ -40,6 +47,7 @@ const router = createBrowserRouter([
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+document.documentElement.classList.add('dark')
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />

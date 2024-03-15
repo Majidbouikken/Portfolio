@@ -1,12 +1,12 @@
-import ProjectCard from '../components/ProjectCard';
-import { projects } from '../data/projects';
+import WorkCard from '../components/WorkCard';
+import { works } from '../data/works';
 import { useState } from 'react';
 import Category from '../types/Category';
 
 const WorksPage: React.FC = () => {
     const [selectedCategory, setSelectedCategory] = useState<Category | "All">("All");
 
-    var filteredProjects = selectedCategory === "All" ? projects : projects.filter(project => project.category === selectedCategory);
+    var filteredProjects = selectedCategory === "All" ? works : works.filter(project => project.category === selectedCategory);
 
     return (
         <div id="works-page" className="max-w-7xl mx-auto my-32 p-8">
@@ -33,7 +33,7 @@ const WorksPage: React.FC = () => {
                     ) }
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-                    { filteredProjects.map((work, index) => (<ProjectCard key={index} work={work} />)) }
+                    { filteredProjects.map((work, index) => (<WorkCard key={index} work={work} />)) }
                 </div>
                 <div className='h-96' />
             </div>
