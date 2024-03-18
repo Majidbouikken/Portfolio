@@ -206,7 +206,7 @@ export const works: WorkType[] = [
         id: "9",
         title: "El Waseel",
         subtitle: "1st prize Hackathon Project: A platform linking local institutions, government and citizens. Built with Flutter, Express.js, MongoDB, Azure NLP.",
-        roles: ["Mobile Developer", "UI Designer"],
+        roles: ["Mobile Developer", "UI Designer", "Backend Developer"],
         collaborators: ["Mohamed Douzane", "Abdelhak Ouchar", "Adel Namani"],
         company: null,
         link: null,

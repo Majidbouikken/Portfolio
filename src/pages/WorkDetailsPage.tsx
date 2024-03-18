@@ -5,6 +5,7 @@ import LazyLoad from "react-lazy-load";
 import ReactPlayer from "react-player";
 import WorkNavBar from "../components/WorkNavBar";
 import GalleryViewer from "../components/GalleryViewer";
+import Technology, { TechnologiesIcons } from "../types/Technology";
 
 const WorkDetailsPage: React.FC = () => {
     const { workDetails } = useLoaderData() as { workDetails: WorkType };
@@ -23,7 +24,7 @@ const WorkDetailsPage: React.FC = () => {
             <div className="flex flex-col items-baseline gap-8">
                 <div className="grid grid-flow-row grid-cols-2 w-full">
                     <div className="flex flex-col items-start">
-                        <Link to={'/works'} className="text-3xl max-w-5xl font-light hover:text-primary-500 hover:underline">Works/</Link>
+                        <Link to={'/works'} className="text-3xl max-w-5xl font-light text-text-800 dark:text-text-100 hover:text-primary-500 hover:underline">Works/</Link>
                         <h1 className="max-w-5xl font-semibold">{workDetails.title}</h1>
                     </div>
                     <div className="flex flex-col gap-12 items-end">
@@ -51,8 +52,18 @@ const WorkDetailsPage: React.FC = () => {
                         }
                     </div>
                 </div>
-                <h3>{workDetails.description}</h3>
-                <p>{workDetails.technologies.join(' | ')}</p>
+                <h4>{workDetails.description}</h4>
+
+                <h2>Languages & Technologies</h2>
+                <div className="flex flex-wrap gap-4">
+                    {workDetails.technologies.map((index, i) => 
+                        (<div className="group flex flex-row gap-2 justify-start justify-items-center">
+                            <img src={TechnologiesIcons[Technology[index]]} className="h-8" />
+                            <h4 className="group-hover:text-text-900 dark:group-hover:text-text-50 transition-colors duration-500 cursor-default">{Technology[index]}</h4>
+                            {(i < workDetails.technologies.length - 1) && <div className="divider ms-4" />}
+                        </div>))
+                    }
+                </div>
                 <ArticleComponent content={workDetails.content} />
 
                 {workDetails.video? (
