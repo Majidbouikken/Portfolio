@@ -51,6 +51,8 @@ const WorkDetailsPage: React.FC = () => {
                         }
                     </div>
                 </div>
+                <h3>{workDetails.description}</h3>
+                <p>{workDetails.technologies.join(' | ')}</p>
                 <ArticleComponent content={workDetails.content} />
 
                 {workDetails.video? (
