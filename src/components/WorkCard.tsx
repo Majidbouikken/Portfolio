@@ -29,7 +29,7 @@ const WorkCard: React.FC<WorkCardInterface> = ({ work }) => {
                 <div className='h-1 w-0 group-hover:w-full rounded-full bg-primary-500 transition-scale duration-500 ease-out' />
             </div>
             {/* <div>{formatDate(work.date)}</div> */}
-            <p className='line-clamp-3 text-ellipsis'>{work.description}</p>
+            <p className='line-clamp-3 text-ellipsis'>{work.subtitle}</p>
         </Link>
     );
 }
