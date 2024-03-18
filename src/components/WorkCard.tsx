@@ -22,7 +22,7 @@ const WorkCard: React.FC<WorkCardInterface> = ({ work }) => {
 
     return (
         <Link to={`/${work.title}`} className='group flex flex-col items-start gap-1 cursor-pointer'>
-            <img key={thumbnail} src={work.thumbnail} alt={thumbnail} className='brightness-100 group-hover:brightness-50 transition-all duration-500' />
+            <img key={thumbnail} src={work.thumbnail} alt={thumbnail} className='brightness-100 group-hover:opacity-50 transition-opacity duration-500' />
             <caption className='-mt-8 text-primary-500 font-bold'>{Category[work.category]}</caption>
             <h3 className='-mt-2 font-semibold line-clamp-1 text-ellipsis'>{work.title}</h3>
             <div ref={lineRef} className='h-1 w-full rounded-full bg-background-200 dark:bg-background-800'>

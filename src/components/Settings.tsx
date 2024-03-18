@@ -46,16 +46,16 @@ const Settings: React.FC = () => {
   };
 
   return (
-    <div className="group fixed h-12 w-12 top-4 end-4 px-4 py-2 gap-3 bg-gray-800/50 hover:bg-gray-800/80 border-gray-600/50 hover:border-gray-600 border-2 rounded-full backdrop-blur-md transition-colors duration-500">
+    <div className="group fixed h-12 w-12 top-4 end-4 px-4 py-2 gap-3 bg-background-200/50 hover:bg-background-200/80 dark:bg-background-800/50 dark:hover:bg-background-800/80 border-background-400/50 hover:border-background-400 dark:border-background-600/50 dark:hover:border-background-600 border-2 rounded-full backdrop-blur-md transition-colors duration-500">
       <div className="absolute w-64 top-full -right-4 p-4 transition-all opacity-0 group-hover:opacity-100 -translate-y-4 group-hover:translate-y-0 duration-300 pointer-events-none group-hover:pointer-events-auto">
-        <div className="flex flex-col py-4 bg-gray-800/80 border-gray-600 border-2 rounded-3xl backdrop-blur-md">
+        <div className="flex flex-col py-4 bg-background-200/80 border-background-400 dark:bg-background-800/80 dark:border-background-600 border-2 rounded-3xl backdrop-blur-md">
           {Object.entries(LANGUAGES).map(([key, value]) => (
             <a
               key={key}
               href="#"
               onClick={() => {console.log("Language changed!")}}
               className={`flex flex-row justify-start gap-4 px-4 py-2 text-sm ${
-                selectedLanguage === key ? 'text-primary-500 hover:bg-gray-600 hover:text-text-50' : 'hover:bg-gray-600 hover:text-text-50'
+                selectedLanguage === key ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-500 dark:hover:text-text-50' : 'hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
               }`}
             >
               <Flag country={key} />

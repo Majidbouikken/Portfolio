@@ -78,9 +78,15 @@ h6 {
 }
 caption {
   font-size: theme('fontSize.sm');
+  color: theme('colors.text.900');
+}.dark caption {
+  color: theme('colors.text.50');
 }
 a {
+  color: theme('colors.text.900');
   /* font-family: 'Rubik'; */
+}.dark a {
+  color: theme('colors.text.50');
 }
 input {
   /* font-family: 'Rubik', sans-serif; */
@@ -113,16 +119,16 @@ button:hover {
 }
 
 .divider {
-  border-right: theme('width[0.5]') solid theme('colors.gray.600');
+  border-right: theme('width[0.5]') solid theme('colors.background.400');
   height: 100%;
 } .dark .divider {
-  border-right: theme('width[0.5]') solid theme('colors.gray.600');
+  border-right: theme('width[0.5]') solid theme('colors.background.600');
   height: 100%;
 }
 .divider-horizontal {
-  border-bottom: theme('height[0.5]') solid theme('colors.gray.600');
+  border-bottom: theme('height[0.5]') solid theme('colors.background.400');
   width: 100%;
 } .dark .divider-horizontal {
-  border-bottom: theme('height[0.5]') solid theme('colors.gray.600');
+  border-bottom: theme('height[0.5]') solid theme('colors.background.600');
   width: 100%;
 }
