@@ -60,7 +60,11 @@ export const works: WorkType[] = [
         description: "This mobile app was fully built with Flutter. The UI was not planned before with an XD or Figma prototype and it was improvized directly in Flutter.",
         content: "",
         thumbnail: require(`./../assets/images/thumbnails/hypefury.png`),
-        images: [],
+        images: [
+            require(`./../assets/images/gallery/hypefury-image-1.jpg`),
+            require(`./../assets/images/gallery/hypefury-image-2.jpg`),
+            require(`./../assets/images/gallery/hypefury-image-3.jpg`),
+        ],
         video: null,
         awards: [],
         technologies: [ Technology.Flutter, Technology.Dart, Technology.Android ],

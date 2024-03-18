@@ -21,7 +21,7 @@ const GalleryViewer: React.FC<{ images: string[] }> = ({ images }) => {
             key={index}
             src={image}
             alt={`Screenshot ${image}`}
-            className="cursor-pointer hover:opacity-75 transition-all duration-300"
+            className="brightness-100 hover:brightness-50 transition-all duration-300 cursor-pointer"
             onClick={() => handleClick(image, index)}
           />
         ))}
