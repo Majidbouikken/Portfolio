@@ -32,7 +32,7 @@ const Settings: React.FC = () => {
                         href="#"
                         onClick={() => {console.log("Language changed!")}}
                         className={`flex flex-row justify-start gap-4 px-4 py-2 text-sm ${
-                          selectedLanguage === key ? 'text-primary-500 hover:bg-gray-600 hover:text-white' : 'hover:bg-gray-600 hover:text-white'
+                          selectedLanguage === key ? 'text-primary-500 hover:bg-gray-600 hover:text-text-50' : 'hover:bg-gray-600 hover:text-text-50'
                         }`}
                       >
                         <Flag country={key} />

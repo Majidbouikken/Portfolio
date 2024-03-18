@@ -57,12 +57,12 @@ const WorkDetailsPage: React.FC = () => {
                 <>
                     <div className="divider-horizontal" />
                     <h2 id="demo-video" className="text-5xl max-w-5xl scroll-mt-28">Demo video</h2>
-                    <LazyLoad className="w-full md:w-2/3 lg:w-1/2 mx-auto" offset={100}>
+                    <LazyLoad className="max-h-96 w-full md:w-2/3 lg:w-1/2 mx-auto" offset={100}>
                         <ReactPlayer
                             url={workDetails.video}
                             controls
                             width="100%"
-                            height="auto"
+                            height="24rem"
                         />
                     </LazyLoad>
                 </>) : <></>}

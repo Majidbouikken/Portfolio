@@ -12,7 +12,7 @@ const ScrollLink: React.FC<{ targetId: string, children: ReactNode }> = ({ targe
     return (<Link 
         to="#"
         onClick={scrollToComponent}
-        className="text-white/60 hover:text-white transition-colors duration-500">{children}</Link>);
+        className="text-text-400 hover:text-text-50 transition-colors duration-500">{children}</Link>);
 }
 
 export default ScrollLink;

@@ -16,7 +16,7 @@ const WorksPage: React.FC = () => {
                     <a
                     key={0}
                     onClick={e => setSelectedCategory("All")}
-                    className="text-white/50 hover:text-white focus:text-primary-500 transition-colors duration-500"
+                    className="text-white/50 hover:text-text-50 focus:text-primary-500 transition-colors duration-500"
                     style={selectedCategory === "All"? {color: '#4746eb', cursor: 'default'}: {cursor: 'pointer'}}>
                         All
                     </a>
@@ -25,7 +25,7 @@ const WorksPage: React.FC = () => {
                             <a
                             key={category}
                             onClick={e => setSelectedCategory(Category[category as keyof typeof Category])}
-                            className="text-white/50 hover:text-white focus:text-primary-500 cursor-pointer transition-colors duration-500"
+                            className="text-text-400 hover:text-text-50 focus:text-primary-500 cursor-pointer transition-colors duration-500"
                             style={Category[selectedCategory as number] === category.toString()? {color: '#4746eb', cursor: 'default'}: {cursor: 'pointer'}}>
                                 {category}
                             </a>
