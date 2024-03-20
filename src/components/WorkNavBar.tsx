@@ -4,19 +4,19 @@ import ScrollLink from "./ScrollLink";
 
 const WorkNavBar: React.FC<{sections: string[], link: string | null}> = ({sections, link}) => {
     return (
-        <div className="flex justify-center z-20">
-            <header className="fixed flex flex-row h-12 justify-stretch items-center bottom-4 px-2 py-2 gap-4 bg-gray-800/50 hover:bg-gray-800/80 border-gray-600/50 hover:border-gray-600 border-2 rounded-full backdrop-blur-md transition-colors duration-500">
-                <div onClick={() => {window.scroll({ top: 0, behavior: 'smooth' });}} className="group flex bg-background-700 p-2 gap-2 rounded-full">
-                    <IconArrowUp className="h-3 w-3 fill-text-400 group-hover:fill-text-50 cursor-pointer" />
+        <div className="flex justify-center">
+            <header className="fixed flex flex-row h-12 justify-stretch items-center bottom-4 px-2 py-2 gap-4 bg-background-200/50 hover:bg-background-200/80 dark:bg-background-800/50 dark:hover:bg-background-800/80 border-background-400/50 hover:border-background-400 dark:border-background-600/50 dark:hover:border-background-600 border-2 rounded-full backdrop-blur-md transition-colors duration-500 z-20">
+                <div onClick={() => {window.scroll({ top: 0, behavior: 'smooth' });}} className="group flex bg-primary-500/50 hover:bg-primary-500 dark:bg-background-700 p-2 gap-2 rounded-full transition-colors duration-500 cursor-pointer">
+                    <IconArrowUp className="h-3 w-3 fill-text-800 dark:fill-text-100 group-hover:fill-text-50" />
                 </div>
                 {sections.map((section) => (<ScrollLink targetId={section}>{section}</ScrollLink>))}
                 {link?
                     <>
                         <div className="divider" />
                         <HeaderLink to={link} target="_blank">
-                            <div className="group flex bg-background-700 py-1 ps-4 pe-2 gap-2 rounded-full hover:underline">
-                                Visit work
-                                <IconChevronUp className="h-4 w-4 fill-text-400 group-hover:fill-text-50 rotate-45" />
+                            <div className="group flex bg-primary-500/50 hover:bg-primary-500 dark:bg-background-700 py-1 ps-4 pe-2 gap-2 rounded-full dark:hover:underline transition-colors duration-500">
+                                <p className="text-text-800 dark:text-text-100 group-hover:text-text-50 font-semibold">Visit work</p>
+                                <IconChevronUp className="h-4 w-4 fill-text-500 dark:fill-text-400 group-hover:fill-text-50 rotate-45" />
                             </div>
                         </HeaderLink></> :
                     <></>

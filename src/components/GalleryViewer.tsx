@@ -32,7 +32,7 @@ const GalleryViewer: React.FC<{ images: string[] }> = ({ images }) => {
             key={index}
             src={image}
             alt={`Screenshot ${image}`}
-            className="brightness-100 hover:brightness-50 transition-all duration-300 cursor-pointer"
+            className="brightness-100 hover:brightness-50 transition-all duration-300 cursor-pointer z-0"
             onClick={() => handleClick(image, index)}
           />
         ))}
@@ -42,7 +42,7 @@ const GalleryViewer: React.FC<{ images: string[] }> = ({ images }) => {
             // onClick={handleClose}
           >
             <img src={selectedImage} alt={`Full Screen`} className="object-contain max-h-full max-w-full" />
-            <caption className="absolute top-4 start-4 font-semibold">{index!! + 1}/{images.length}</caption>
+            <caption className="absolute top-4 start-4 text-text-50 font-semibold">{index!! + 1}/{images.length}</caption>
             <div onClick={handleClose} className="absolute top-4 end-4"><IconClose className="w-6 h-6 fill-text-400 hover:fill-text-50 cursor-pointer" /></div>
             {index !== 0 && (<div onClick={() => {handlePrevious(index)}} className="absolute start-4"><IconArrowLeft className="w-6 h-6 fill-text-400 hover:fill-text-50 cursor-pointer" /></div>)}
             {index !== (images.length - 1) && (<div onClick={() => {handleNext(index)}} className="absolute end-4"><IconArrowRight className="w-6 h-6 fill-text-400 hover:fill-text-50 cursor-pointer" /></div>)}

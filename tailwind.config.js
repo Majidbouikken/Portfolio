@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
+        'primary': {
           50: '#eaeafd',
           100: '#cac9fa',
           200: '#a6a7f7',
@@ -44,6 +44,9 @@ module.exports = {
           900: '#111827', // Dark deap background
           950: '#020617',
         },
+        'linkedin': '#0A66C2',
+        'upwork': '#14A800',
+        'instagram': '#833AB4',
       },
       animation: {
         throb: 'throb 2s cubic-bezier(0, 0, 0.1, 1) infinite',
