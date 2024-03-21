@@ -9,8 +9,8 @@ const WorksPage: React.FC = () => {
     var filteredProjects = selectedCategory === "All" ? works : works.filter(project => project.category === selectedCategory);
 
     return (
-        <div id="works-page" className="max-w-7xl mx-auto my-32 p-8">
-            <div className="flex flex-col items-baseline gap-8">
+        <div id="works-page" className="max-w-7xl mx-auto my-32 px-8">
+            <div className="flex flex-col items-baseline gap-4">
                 <h1 className="text-6xl max-w-5xl">Here you can find all my works and projects</h1>
                 <div className="flex flex-row gap-4 text-2xl">
                     <a

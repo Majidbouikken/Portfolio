@@ -28,7 +28,7 @@ const WorkCard: React.FC<WorkCardInterface> = ({ work }) => {
             <div ref={lineRef} className='h-1 w-full rounded-full bg-background-200 dark:bg-background-800'>
                 <div className='h-1 w-0 group-hover:w-full rounded-full bg-primary-500 transition-scale duration-500 ease-out' />
             </div>
-            {/* <div>{formatDate(work.date)}</div> */}
+            {/* <div>{formatDateMonthYear(work.date)}</div> */}
             <p className='line-clamp-3 text-ellipsis'>{work.subtitle}</p>
         </Link>
     );

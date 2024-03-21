@@ -5,7 +5,7 @@ import LazyLoad from "react-lazy-load";
 import ReactPlayer from "react-player";
 import WorkNavBar from "../components/WorkNavBar";
 import GalleryViewer from "../components/GalleryViewer";
-import Technology, { TechnologiesIcons } from "../types/Technology";
+import Technology, { Technologies } from "../types/Technology";
 
 const WorkDetailsPage: React.FC = () => {
     const { workDetails } = useLoaderData() as { workDetails: WorkType };
@@ -56,13 +56,14 @@ const WorkDetailsPage: React.FC = () => {
 
                 <h2>Languages & Technologies</h2>
                 <div className="flex flex-wrap gap-4">
-                    {workDetails.technologies.map((index, i) => 
-                        (<div className="group flex flex-row gap-2 justify-start justify-items-center">
-                            <img src={TechnologiesIcons[Technology[index]]} className="h-8" />
-                            <h4 className="group-hover:text-text-900 dark:group-hover:text-text-50 transition-colors duration-500 cursor-default">{Technology[index]}</h4>
+                    {workDetails.technologies.map((index, i) => (
+                        <Link to={Technologies[Technology[index]][1]} target="_blank" className="group flex flex-row gap-2 justify-start justify-items-center tooltip-container">
+                            <img src={Technologies[Technology[index]][0]} className="h-8 w-8" />
+                            <h4 className="group-hover:text-text-900 dark:group-hover:text-text-50 transition-colors duration-500">{Technology[index]}</h4>
+                            <div className="tooltip">{Technologies[Technology[index]][2]}</div>
                             {(i < workDetails.technologies.length - 1) && <div className="divider ms-4" />}
-                        </div>))
-                    }
+                        </Link>
+                    ))}
                 </div>
                 <ArticleComponent content={workDetails.content} />
 

@@ -4,6 +4,7 @@
 
 html {
   scrollbar-gutter: stable;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -149,4 +150,31 @@ button:hover {
 } .dark .divider-horizontal {
   border-bottom: theme('height[0.5]') solid theme('colors.background.600');
   width: 100%;
+}
+
+.tooltip-container {
+  position: relative;
+}
+
+.tooltip {
+  visibility: hidden;
+  display: block;
+  background-color: theme('colors.background.800');
+  color: #fff;
+  max-width: theme('width.96');
+  padding: 8px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: break-space;
+}
+
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
