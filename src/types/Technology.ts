@@ -17,7 +17,7 @@ export const TechnologiesByCategories: { [key: string]: Technology[] } = {
     "Mobile": [ Technology["Flutter"], Technology["Android SDK"] ],
     "Backend & Databases": [ Technology["Spring"], Technology["Express.js"], Technology["PostgreSQL"], Technology["MongoDB"], Technology["Firebase"] ],
     "Cloud Providers": [ Technology["AWS"], Technology["Azure"] ],
-    "Design": [ Technology["Adobe XD"], Technology["Blender"] ],
+    "Other": [ Technology["Adobe XD"], Technology["Unity"], Technology["Blender"] ],
 }
 
 export const Technologies: { [key: string]: any[]; } = {

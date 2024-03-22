@@ -15,7 +15,7 @@ const AboutPage: React.FC = () => {
                     <h2>I'm a passionate software engineer and creative developer who approaches each project with zeal, crafting digital solutions that seamlessly blend technical expertise with artistic finesse.</h2>
                     <h2>My aim is to create products that functions flawlessly and captivate and inspire users.</h2>
                 </div>
-                <div id="technical-stack" className="space-y-4 w-full">
+                <section id="technical-stack" className="space-y-4 w-full">
                     <h1>Technical Stack</h1>
                     <div>
                         {
@@ -38,8 +38,8 @@ const AboutPage: React.FC = () => {
                             })
                         }
                     </div>
-                </div>
-                <div id="experience" className="space-y-4 w-full">
+                </section>
+                <section id="experience" className="space-y-4 w-full">
                     <h1>Career Journey</h1>
                     <div className="flex flex-col">
                         {
@@ -47,7 +47,9 @@ const AboutPage: React.FC = () => {
                                 <div key={index} className="flex flex-row items-stretch justify-stretch gap-8">
                                     {/* Timeline */}
                                     <div className="flex flex-col items-center translate-y-3">
-                                        <div className="h-0 w-0 border-4 border-background-500 rounded-full my-2" />
+                                        <div className="rotate-45 flex my-2">
+                                            <div className="h-2 w-2 bg-primary-500 rounded-sm" />
+                                        </div>
                                         {index !== experiences.length - 1 && <div className="w-1 h-full bg-background-800 rounded-full" />}
                                     </div>
                                     {/* Year */}
@@ -61,11 +63,11 @@ const AboutPage: React.FC = () => {
                             ))
                         }
                     </div>
-                </div>
-                <div id="education">
+                </section>
+                <section id="education">
                     <h1>Academic Background</h1>
 
-                </div>
+                </section>
             </div>
         </div>
     );

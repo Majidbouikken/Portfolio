@@ -46,8 +46,9 @@ const Settings: React.FC = () => {
   };
 
   return (
-    <div className="group fixed h-12 w-12 top-4 end-4 p-1 gap-3 bg-background-200/50 hover:bg-background-200/80 dark:bg-background-800/50 dark:hover:bg-background-800/80 border-background-400/50 hover:border-background-400 dark:border-background-600/50 dark:hover:border-background-600 border-2 rounded-full backdrop-blur-md transition-colors duration-500 z-20">
-      <img src={require('./../assets/icons/3d-cog.png')} className="" />
+    <div className="group flex items-center justify-center fixed h-12 w-12 top-4 end-4 p-0 gap-3 bg-background-200/50 hover:bg-background-200/80 dark:bg-background-800/50 dark:hover:bg-background-800/80 border-background-400/50 hover:border-background-400 dark:border-background-600/50 dark:hover:border-background-600 border-2 rounded-full backdrop-blur-md transition-colors duration-500 z-20">
+      <img src={require('./../assets/icons/3d-cog.png')} className="h-10 w-10" />
+      <div className="absolute h-10 w-10 -z-10 settings-gradient scale-125 opacity-0 group-hover:opacity-60 transition-all duration-500"></div>
       <div className="absolute w-64 top-full -right-4 p-4 transition-all opacity-0 group-hover:opacity-100 -translate-y-4 group-hover:translate-y-0 duration-300 pointer-events-none group-hover:pointer-events-auto">
         <div className="flex flex-col py-4 bg-background-200/80 border-background-400 dark:bg-background-800/80 dark:border-background-600 border-2 rounded-3xl backdrop-blur-md">
           {Object.entries(LANGUAGES).map(([key, value]) => (

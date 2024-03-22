@@ -16,7 +16,7 @@ export { ReactComponent as IconChevronDown } from './assets/icons/chevron-down.s
 export { ReactComponent as IconClose } from './assets/icons/close-icon.svg';
 export { ReactComponent as IconCookies } from './assets/icons/cookies-icon.svg';
 export { ReactComponent as IconInstagram } from './assets/icons/social-instagram-icon.svg';
-export { ReactComponent as IconFacebook } from './assets/icons/social-facebook-icon.svg';
+export { ReactComponent as IconUpwork } from './assets/icons/social-upwork-icon.svg';
 export { ReactComponent as IconLinkedin } from './assets/icons/social-linkedin-icon.svg';
 export { ReactComponent as IconX } from './assets/icons/social-x-icon.svg';
 export { ReactComponent as IconSmallDot } from './assets/icons/small-dot-icon.svg';

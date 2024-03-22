@@ -178,3 +178,18 @@ button:hover {
   visibility: visible;
   opacity: 1;
 }
+
+.instagram-gradient:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #ffee31 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.home-gradient {
+  background: radial-gradient(circle, #fdf497, #ffee31, #fd5949, #d6249f, #285AEB);
+}
+.settings-gradient {
+  background: radial-gradient(circle, #ffcf6740, #f7ff8e, #ff48c800, #0000);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+} .dark .settings-gradient {
+  background: radial-gradient(circle, #67b3ff40, #5d4eff, #ff4eca00, #0000);
+}
