@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IconArrowLeft, IconArrowRight, IconClose } from "../icons";
 
 const GalleryViewer: React.FC<{ images: string[] }> = ({ images }) => {
     const [index, setIndex] = useState<number | null>(null);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const imagePreviewRef = useRef<HTMLDivElement>(null);
   
     const handleClick = (image: string, index: number) => {
       setSelectedImage(image);
@@ -25,6 +26,22 @@ const GalleryViewer: React.FC<{ images: string[] }> = ({ images }) => {
       setIndex(index+1);
     };
 
+    const handleKeyPress = (event: React.KeyboardEvent, index: number) => {
+      if (event.key === 'ArrowLeft') {
+          handlePrevious(index);
+      } else if (event.key === 'ArrowRight') {
+          handleNext(index);
+      } else if (event.key === 'Escape') {
+          handleClose();
+      }
+  };
+
+  useEffect(() => {
+    if (imagePreviewRef.current) {
+      imagePreviewRef.current.focus();
+    }
+  }, []);
+
     return (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {images.map((image, index) => (
@@ -38,8 +55,11 @@ const GalleryViewer: React.FC<{ images: string[] }> = ({ images }) => {
         ))}
         {selectedImage && index !== null && (
           <div
+            id="image-preview"
+            ref={imagePreviewRef}
+            onKeyDown={(event) => {handleKeyPress(event, index);}}
+            tabIndex={0}
             className="fixed top-0 left-0 z-50 w-full h-full bg-background-950/60 backdrop-blur-md flex items-center justify-center"
-            // onClick={handleClose}
           >
             <img src={selectedImage} alt={`Full Screen`} className="object-contain max-h-full max-w-full" />
             <caption className="absolute top-4 start-4 text-text-50 font-semibold">{index!! + 1}/{images.length}</caption>
