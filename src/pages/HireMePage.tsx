@@ -1,19 +1,54 @@
+import { ChangeEvent, ChangeEventHandler, useState } from "react";
 import LoadingBalls from "../components/LoadingBalls";
 import { IconInstagram, IconLinkedin, IconUpwork } from "../icons";
+import submitMessage from "../services/HireMeService";
+import HiringMessageForm from "../types/HiringMessageForm";
 
 const HireMePage: React.FC = () => {
+    const [ loading, setLoading ] = useState(false);
+    const [ success, setSuccess ] = useState(false);
+    const [ error, setError ] = useState(false);
+    const [ fullname, setFullname ] = useState("");
+    const [ message, setMessage ] = useState("");
+
+    const handleFullnameChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setFullname(event.target.value);
+    }
+
+    const handleMessageChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+        setMessage(event.target.value);
+    }
+
+    const handleSubmit = async (data: HiringMessageForm) => {
+        setLoading(true);
+        setSuccess(false);
+        try {
+            await submitMessage(data);
+            setSuccess(true);
+        } catch(error) {
+            console.log(error);
+        } finally {
+            setLoading(false);
+        }
+    }
+
     return (
         <div id="hire-me-page" className="max-w-7xl mx-auto my-32 px-8">
             <div className="flex flex-col items-baseline gap-4">
                 <h1 className="text-6xl mb-4">Let's work together</h1>
                 <div className="flex flex-col items-baseline gap-4 w-full">
-                    <input placeholder="Your fullname" className="text-2xl max-w-3xl w-full resize-none overflow-y-auto bg-transparent outline-none" />
-                    <textarea placeholder="Write your message here..." className="text-2xl h-40 max-w-3xl w-full resize-none overflow-y-auto bg-transparent outline-none" />
-                    <button className="flex flex-row gap-2 items-center text-xl text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500">
-                        {true? "SEND MESSAGE" : (<LoadingBalls />)}
+                    <input onChange={handleFullnameChange} placeholder="Your fullname" className="text-2xl max-w-3xl w-full resize-none overflow-y-auto bg-transparent outline-none" style={{visibility: success? 'hidden': 'visible' }} />
+                    <textarea onChange={handleMessageChange} placeholder="Write your message here..." className="text-2xl h-40 max-w-3xl w-full resize-none overflow-y-auto bg-transparent outline-none" style={{visibility: success? 'hidden': 'visible' }} />
+                    <button
+                        onClick={() => {handleSubmit({ fullname: fullname, message: message})}}
+                        disabled={loading}
+                        className="flex flex-row gap-2 items-center text-xl text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
+                        style={{visibility: success? 'hidden': 'visible' }}
+                    >
+                        {!loading? "SEND MESSAGE" : (<LoadingBalls />)}
                         <img src={require('./../assets/icons/3d-send.png')} className="h-8 w-8" />
                     </button>
-                    {false && <div className="absolute flex flex-row gap-4 items-end">
+                    {success && <div className="absolute flex flex-row gap-4 items-end">
                         <h2>Your message has been sent!</h2>
                         <img src={require('./../assets/icons/3d-success.png')} className="h-16 w-16" />
                     </div>}
