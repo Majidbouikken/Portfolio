@@ -19,7 +19,7 @@ const Availability: React.FC<{ isAvailable?: boolean }> = ({ isAvailable = true 
         <a className="text-text-500 dark:text-text-400 font-semibold">
             {isAvailable? 'Open for work' : 'Non available'}
         </a>
-        <caption className="absolute start-full px-4 text-nowrap transition-all -translate-x-4 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 duration-500 delay-300 pointer-events-none">
+        <caption className="hidden sm:block md:hidden lg:block absolute start-full px-4 text-nowrap transition-all -translate-x-4 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 duration-500 delay-300 pointer-events-none">
             {localTime} | Paris, France
         </caption>
     </Link>);

@@ -1,6 +1,6 @@
 import { ChangeEvent, ChangeEventHandler, useState } from "react";
 import LoadingBalls from "../components/LoadingBalls";
-import { IconInstagram, IconLinkedin, IconUpwork } from "../icons";
+import { IconGithub, IconInstagram, IconLinkedin, IconUpwork } from "../icons";
 import submitMessage from "../services/HireMeService";
 import HireMeForm from "../types/HireMeForm";
 
@@ -35,7 +35,7 @@ const HireMePage: React.FC = () => {
     return (
         <div id="hire-me-page" className="max-w-7xl mx-auto my-32 px-8">
             <div className="flex flex-col items-baseline gap-4">
-                <h1 className="text-6xl mb-4">Let's work together</h1>
+                <h1 className="mb-4">Let's work together</h1>
                 <div className="flex flex-col items-baseline gap-4 w-full">
                     <input onChange={handleFullnameChange} placeholder="Your fullname" className="text-2xl max-w-3xl w-full resize-none overflow-y-auto bg-transparent outline-none" style={{visibility: success? 'hidden': 'visible' }} />
                     <textarea onChange={handleMessageChange} placeholder="Write your message here..." className="text-2xl h-40 max-w-3xl w-full resize-none overflow-y-auto bg-transparent outline-none" style={{visibility: success? 'hidden': 'visible' }} />
@@ -64,6 +64,7 @@ const HireMePage: React.FC = () => {
                         <a href="https://www.linkedin.com/in/abdelmadjid-bouikken/" target="_blank" className="fill-text-800 dark:fill-text-50 hover:fill-white p-2 hover:bg-linkedin border-background-400/50 dark:border-background-600/50 hover:border-linkedin dark:hover:border-linkedin border-2 rounded-full"><IconLinkedin className="h-8 w-8" /></a>
                         <a href="https://www.upwork.com/freelancers/~0177e23888de4f6747" target="_blank" className="fill-text-800 dark:fill-text-50 hover:fill-white p-2 hover:bg-upwork border-background-400/50 dark:border-background-600/50 hover:border-upwork dark:hover:border-upwork border-2 rounded-full"><IconUpwork className="h-8 w-8" /></a>
                         <a href="https://www.instagram.com/maj.bba/" target="_blank" className="fill-text-800 dark:fill-text-50 hover:fill-white p-2 instagram-gradient border-background-400/50 dark:border-background-600/50 hover:border-instagram dark:hover:border-instagram border-2 rounded-full"><IconInstagram className="h-8 w-8" /></a>
+                        <a href="https://www.github.com/majidbouikken/" target="_blank" className="fill-text-800 dark:fill-text-50 hover:fill-white p-2 hover:bg-github border-background-400/50 dark:border-background-600/50 hover:border-github dark:hover:border-github border-2 rounded-full"><IconGithub className="h-8 w-8" /></a>
                     </div>
                 </div>
             </div>

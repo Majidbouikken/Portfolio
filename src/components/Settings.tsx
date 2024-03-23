@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { FlagAlgerian, FlagArabic, FlagDeutsch, FlagEnglish, FlagFrench, FlagItalian, FlagJapanese } from "../icons";
+import HeaderLink from "./HeaderLink";
+import { Link, useLocation } from "react-router-dom";
 
 const LANGUAGES = {
     // "de": "Deutsch",
@@ -23,6 +25,7 @@ const Settings: React.FC = () => {
   const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
   const [darkMode, setDarkMode] = useState(systemTheme.matches);
+  const location = useLocation();
 
   useEffect(() => {
     const storedDarkMode = localStorage.getItem('darkMode');
@@ -50,14 +53,52 @@ const Settings: React.FC = () => {
       <img src={require('./../assets/icons/3d-cog.png')} className="h-10 w-10" />
       <div className="absolute h-10 w-10 -z-10 settings-gradient scale-125 opacity-0 group-hover:opacity-60 transition-all duration-500"></div>
       <div className="absolute w-64 top-full -right-4 p-4 transition-all opacity-0 group-hover:opacity-100 -translate-y-4 group-hover:translate-y-0 duration-300 pointer-events-none group-hover:pointer-events-auto">
-        <div className="flex flex-col py-4 bg-background-200/80 border-background-400 dark:bg-background-800/80 dark:border-background-600 border-2 rounded-3xl backdrop-blur-md">
+        <div className="flex flex-col py-4 bg-background-200 dark:bg-background-800 border-background-400 dark:border-background-600 border-2 rounded-3xl backdrop-blur-md z-20">
+          <div className="flex md:hidden flex-col">
+            <Link to="" className={`flex flex-row justify-start items-center gap-4 px-4 py-2 text-sm font-semibold ${(location.pathname === '/')? 'text-primary-500 dark:text-text-50': 'text-text-500 dark:text-text-400'}`}>
+              <img src={require('./../assets/icons/3d-home.png')} className="h-8 w-8" />
+              Home
+            </Link>
+            <div className="divider-horizontal my-4" />
+            <Link
+              key="works"
+              to="works"
+              onClick={() => {console.log("Language changed!")}}
+              className={`flex flex-row justify-start gap-4 px-4 py-2 text-sm font-semibold ${
+                (location.pathname === '/works') ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-400 dark:hover:text-text-50' : 'text-text-500 dark:text-text-400 hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
+              }`}
+            >
+              Works
+            </Link>
+            <Link
+              key="about"
+              to="about"
+              onClick={() => {console.log("Language changed!")}}
+              className={`flex flex-row justify-start gap-4 px-4 py-2 text-sm font-semibold ${
+                (location.pathname === '/about') ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-500 dark:hover:text-text-50' : 'text-text-500 dark:text-text-400 hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
+              }`}
+            >
+              About
+            </Link>
+            <Link
+              key="hire-me"
+              to="hire-me"
+              onClick={() => {console.log("Language changed!")}}
+              className={`flex flex-row justify-start gap-4 px-4 py-2 text-sm font-semibold ${
+                (location.pathname === '/hire-me') ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-500 dark:hover:text-text-50' : 'text-text-500 dark:text-text-400 hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
+              }`}
+            >
+              Hire me
+            </Link>
+            <div className="divider-horizontal my-4" />
+          </div>
           {Object.entries(LANGUAGES).map(([key, value]) => (
             <a
               key={key}
               href="#"
               onClick={() => {console.log("Language changed!")}}
-              className={`flex flex-row justify-start gap-4 px-4 py-2 text-sm ${
-                selectedLanguage === key ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-500 dark:hover:text-text-50' : 'hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
+              className={`flex flex-row justify-start gap-4 px-4 py-2 text-sm font-semibold ${
+                selectedLanguage === key ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-500 dark:hover:text-text-50' : 'text-text-500 dark:text-text-400 hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
               }`}
             >
               <Flag country={key} />

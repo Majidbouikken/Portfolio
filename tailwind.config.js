@@ -47,6 +47,7 @@ module.exports = {
         'linkedin': '#0A66C2',
         'upwork': '#14A800',
         'instagram': '#833AB4',
+        'github': '#24292F',
       },
       animation: {
         throb: 'throb 2s cubic-bezier(0, 0, 0.1, 1) infinite',

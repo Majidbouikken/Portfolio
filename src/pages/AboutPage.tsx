@@ -7,7 +7,7 @@ const AboutPage: React.FC = () => {
     return (
         <div id="about-page" className="max-w-7xl mx-auto my-32 px-8">
             <div className="flex flex-col items-baseline gap-32 w-full">
-                <div id="who-am-i" className="flex flex-row w-full justify-between items-end mt-32">
+                <div id="who-am-i" className="flex flex-col w-full mt-auto md:flex-row justify-between items-start md:items-end">
                     <h1 className="text-9xl mb-4">Hiya!</h1>
                     <h2 className="max-w-2xl w-full text-end">I'm Abdelmadjid Bouikken,<br />a software engineer based in Paris.</h2>
                 </div>

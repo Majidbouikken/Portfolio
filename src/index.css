@@ -39,15 +39,14 @@ p {
   font-weight: 400;
 }
 h1 {
-  /* font-family: 'Rubik'; */
-  font-size: theme('fontSize.6xl');
+  font-size: theme('fontSize.3xl');
   color: theme('colors.text.900');
-} .dark h1 {
+}
+.dark h1 {
   color: theme('colors.text.50');
 }
 h2 {
-  /* font-family: 'Rubik'; */
-  font-size: theme('fontSize.3xl');
+  font-size: theme('fontSize.2xl');
   font-weight: theme('fontWeight.normal');
   color: theme('colors.text.900');
 }.dark h2 {
@@ -110,6 +109,20 @@ button {
 }
 button:hover {
   /* color: theme('colors.primary.500'); */
+}
+
+@media screen and (min-width: theme('screens.sm')) {
+  h1 {
+    font-size: theme('fontSize.5xl');
+  }
+  h2 {
+    font-size: theme('fontSize.3xl');
+  }
+}
+@media screen and (min-width: theme('screens.md')) {
+  h1 {
+    font-size: theme('fontSize.6xl');
+  }
 }
 
 /* Scrollbar customization*/
