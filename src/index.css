@@ -179,12 +179,20 @@ button:hover {
   border-radius: 4px;
   position: absolute;
   z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s;
   white-space: break-space;
+}
+
+.tooltip-ontop {
+  transform: translateX(-50%);
+  bottom: 125%;
+  left: 50%;
+}
+
+.tooltip-below {
+  top: 125%;
+  left: 0;
 }
 
 .tooltip-container:hover .tooltip {

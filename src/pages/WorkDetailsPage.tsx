@@ -60,7 +60,7 @@ const WorkDetailsPage: React.FC = () => {
                         <Link to={Technologies[Technology[index]][1]} target="_blank" className="group flex flex-row gap-2 justify-start justify-items-center tooltip-container">
                             <img src={Technologies[Technology[index]][0]} className="h-8 w-8" />
                             <h4 className="group-hover:text-text-900 dark:group-hover:text-text-50 transition-colors duration-500">{Technology[index]}</h4>
-                            <div className="tooltip">{Technologies[Technology[index]][2]}</div>
+                            <div className="tooltip tooltip-ontop">{Technologies[Technology[index]][2]}</div>
                             {(i < workDetails.technologies.length - 1) && <div className="divider ms-4" />}
                         </Link>
                     ))}
