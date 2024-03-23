@@ -2,7 +2,7 @@ import { ChangeEvent, ChangeEventHandler, useState } from "react";
 import LoadingBalls from "../components/LoadingBalls";
 import { IconInstagram, IconLinkedin, IconUpwork } from "../icons";
 import submitMessage from "../services/HireMeService";
-import HiringMessageForm from "../types/HiringMessageForm";
+import HireMeForm from "../types/HireMeForm";
 
 const HireMePage: React.FC = () => {
     const [ loading, setLoading ] = useState(false);
@@ -19,7 +19,7 @@ const HireMePage: React.FC = () => {
         setMessage(event.target.value);
     }
 
-    const handleSubmit = async (data: HiringMessageForm) => {
+    const handleSubmit = async (data: HireMeForm) => {
         setLoading(true);
         setSuccess(false);
         try {

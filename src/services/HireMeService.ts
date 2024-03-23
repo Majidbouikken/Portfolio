@@ -1,7 +1,7 @@
-import HiringMessageForm from "../types/HiringMessageForm";
+import HireMeForm from "../types/HireMeForm";
 import { db } from "./FirebaseConfiguration";
 
-const submitMessage = async (data: HiringMessageForm) => {
+const submitMessage = async (data: HireMeForm) => {
     await db.collection("portfolio-messages").add({
         fullname: data.fullname,
         message: data.message,
