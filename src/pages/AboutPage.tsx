@@ -56,11 +56,12 @@ const AboutPage: React.FC = () => {
                                     {/* Year */}
                                     <h2>{formatDateYearOnly(experience.startDate)}</h2>
                                     {/* Role and Company */}
-                                    <div className="mb-8">
+                                    <div className="mb-8 tooltip-container">
                                         <h2>{experience.role}</h2>
                                         <a href={experience.companyWebsite} target="_blank" className="text-text-800 dark:text-text-100 hover:text-text-900 dark:hover:text-text-50 hover:underline transition-colors duration-500">
                                             {experience.company}
                                         </a>
+                                        <div className="tooltip tooltip-below">{experience.description}</div>
                                     </div>
                                 </div>
                             ))
@@ -82,7 +83,7 @@ const AboutPage: React.FC = () => {
                                     </div>
                                     {/* Year */}
                                     <h2>{formatDateYearOnly(education.endDate)}</h2>
-                                    {/* Role and Company */}
+                                    {/* Diploma and University */}
                                     <div className="mb-8 tooltip-container">
                                         <h2>{education.diploma} - {education.title}</h2>
                                         <a href={'education.universityWebsite'} target="_blank" className="text-text-800 dark:text-text-100 hover:text-text-900 dark:hover:text-text-50 hover:underline transition-colors duration-500">

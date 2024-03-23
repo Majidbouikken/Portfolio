@@ -11,7 +11,7 @@ const WorksPage: React.FC = () => {
     return (
         <div id="works-page" className="max-w-7xl mx-auto my-32 px-8">
             <div className="flex flex-col items-baseline gap-4">
-                <h1 className="max-w-5xl">Here you can find all my works and projects</h1>
+                <h1 className="max-w-5xl">Here you can find<br />all my works and projects</h1>
                 <div className="flex flex-wrap gap-4 text-2xl">
                     <a
                     key={0}
