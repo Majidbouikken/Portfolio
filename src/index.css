@@ -214,3 +214,21 @@ button:hover {
 } .dark .settings-gradient {
   background: radial-gradient(circle, #67b3ff40, #5d4eff, #ff4eca00, #0000);
 }
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}

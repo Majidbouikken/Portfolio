@@ -47,6 +47,11 @@ const router = createBrowserRouter([
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+if (localStorage.getItem('darkTheme') || window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')
+}
 root.render(
   <StrictMode>
     <RouterProvider router={router} />

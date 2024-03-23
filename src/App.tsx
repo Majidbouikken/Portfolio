@@ -1,15 +1,12 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import NavBar from './layout/NavBar';
 import Availability from './components/Availability';
 import Settings from './components/Settings';
 import ForFun from './components/ForFun';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 function App() {
-  if (localStorage.getItem('darkTheme') || window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
+  const location = useLocation();
 
   return (
     <div>
@@ -17,7 +14,12 @@ function App() {
       <Availability isAvailable={true} />
       <Settings />
       <ForFun />
-      <Outlet />
+      {/* <Outlet /> */}
+      <TransitionGroup>
+        <CSSTransition key={location.key} classNames="fade" timeout={300}>
+          <Outlet />
+        </CSSTransition>
+      </TransitionGroup>
       <footer></footer>
     </div>
   );
