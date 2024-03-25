@@ -65,7 +65,7 @@ const Settings: React.FC = () => {
             >
               {t("works")}
             </Link>
-            <Link
+            {/* <Link
               key="about"
               to="about"
               className={`flex flex-row justify-start gap-4 px-4 py-2 text-sm font-semibold ${
@@ -73,7 +73,7 @@ const Settings: React.FC = () => {
               }`}
             >
               {t("about")}
-            </Link>
+            </Link> */}
             <Link
               key="hire-me"
               to="hire-me"

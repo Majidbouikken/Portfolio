@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import HomePage from './pages/HomePage';
 import WorksPage from './pages/WorksPage';
 import AboutPage from './pages/AboutPage';
 import HireMePage from './pages/HireMePage';
@@ -13,6 +12,7 @@ import WorkDetailsPage from './pages/WorkDetailsPage';
 import { workDetailsLoader } from './services/WorkService';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
+import ErrorPage from './pages/ErrorPage';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <HomePage />,
+        element: <AboutPage />,
       },
       {
         path: "works",
@@ -32,10 +32,10 @@ const router = createBrowserRouter([
         element: <WorkDetailsPage />,
         loader: workDetailsLoader,
       },
-      {
-        path: "about",
-        element: <AboutPage />,
-      },
+      // {
+      //   path: "about",
+      //   element: <AboutPage />,
+      // },
       {
         path: "hire-me",
         element: <HireMePage />,
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
         element: <ForFunPage />,
       },
     ],
-    errorElement: <h1>Error page</h1>,
+    errorElement: <ErrorPage />,
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);

@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
                 <HeaderLink to=""><img src={require('./../assets/icons/3d-home.png')} className="h-8 w-8" /></HeaderLink>
                 <div className="divider" />
                 <HeaderLink to="works">{t('works')}</HeaderLink>
-                <HeaderLink to="about">{t('about')}</HeaderLink>
+                {/* <HeaderLink to="about">{t('about')}</HeaderLink> */}
                 <HeaderLink to="hire-me">{t('hire_me')}</HeaderLink>
             </header>
         </div>
