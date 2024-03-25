@@ -3,26 +3,29 @@ import { experiences } from "../data/experiences";
 import Technology, { TechnologiesByCategories, Technologies } from "../types/Technology";
 import { formatDateYearOnly } from "../utils/DateUtils";
 import { educations } from "../data/educations";
+import { useTranslation } from "react-i18next";
 
 const AboutPage: React.FC = () => {
+    const { t } = useTranslation();
+
     return (
         <div id="about-page" className="max-w-7xl mx-auto my-32 px-8">
             <div className="flex flex-col items-baseline gap-32 w-full">
                 <div id="who-am-i" className="flex flex-col w-full mt-auto md:flex-row justify-between items-start md:items-end">
-                    <h1 className="text-9xl mb-4">Hiya!</h1>
-                    <h2 className="max-w-2xl w-full text-end">I'm Abdelmadjid Bouikken,<br />a software engineer based in Paris.</h2>
+                    <h1 className="text-9xl mb-4">{t('hello')}</h1>
+                    <h2 className="max-w-2xl w-full text-end">{t('i_am_abdelmadjid_bouikken')}<br />{t('a_software_engineer_in_paris')}</h2>
                 </div>
                 <div id="who-am-i" className="flex flex-col gap-8 w-full">
-                    <h2>I'm a passionate software engineer and creative developer who approaches each project with zeal, crafting digital solutions that seamlessly blend technical expertise with artistic finesse.</h2>
-                    <h2>My aim is to create products that functions flawlessly and captivate and inspire users.</h2>
+                    <h2>{t('i_am_a_passionate_software_engineer')}</h2>
+                    <h2>{t('my_aim_is_to_create_products')}</h2>
                 </div>
                 <section id="technical-stack" className="space-y-4 w-full">
-                    <h1>Technical Stack</h1>
+                    <h1>{t('technical_stack')}</h1>
                     <div>
                         {
                             Object.entries(TechnologiesByCategories).map((category) => {
                                 return (<>
-                                    <h5 className="mt-4 mb-2">{category[0]}</h5>
+                                    <h5 className="mt-4 mb-2">{t(category[0])}</h5>
                                     <div className="flex flex-wrap gap-2">
                                         {
                                             category[1].map((technolgy, index) => (
@@ -41,7 +44,7 @@ const AboutPage: React.FC = () => {
                     </div>
                 </section>
                 <section id="experience" className="space-y-4 w-full">
-                    <h1>Career Journey</h1>
+                    <h1>{t('career_journey')}</h1>
                     <div className="flex flex-col">
                         {
                             experiences.map((experience, index) => (
@@ -68,8 +71,8 @@ const AboutPage: React.FC = () => {
                         }
                     </div>
                 </section>
-                <section id="education">
-                    <h1>Academic Background</h1>
+                <section id="education" className="space-y-4 w-full">
+                    <h1>{t('academic_background')}</h1>
                     <div className="flex flex-col">
                         {
                             educations.map((education, index) => (
@@ -95,6 +98,15 @@ const AboutPage: React.FC = () => {
                             ))
                         }
                     </div>
+                </section>
+                <section id="hire-me">
+                    <Link
+                        to="/hire-me"
+                        className="flex flex-row gap-2 items-center text-xl text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
+                    >
+                        {t("hire_me")}
+                        <img src={require('./../assets/icons/3d-send.png')} className="h-8 w-8" />
+                    </Link>
                 </section>
             </div>
         </div>

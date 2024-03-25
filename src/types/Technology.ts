@@ -12,12 +12,12 @@ enum Technology {
 export default Technology;
 
 export const TechnologiesByCategories: { [key: string]: Technology[] } = {
-    "Languages": [ Technology["Kotlin"], Technology["Java"], Technology["Typescript"], Technology["Javascript"], Technology["Dart"], Technology["C#"], Technology["Python"] ],
-    "Web": [ Technology["React"], Technology["Vue.js"], Technology["Node.js"], Technology["Three.js"], Technology["Tailwind CSS"] ],
-    "Mobile": [ Technology["Flutter"], Technology["Android SDK"] ],
-    "Backend & Databases": [ Technology["Spring"], Technology["Express.js"], Technology["PostgreSQL"], Technology["MongoDB"], Technology["Firebase"] ],
-    "Cloud Providers": [ Technology["AWS"], Technology["Azure"] ],
-    "Other": [ Technology["Adobe XD"], Technology["Unity"], Technology["Blender"] ],
+    "languages": [ Technology["Kotlin"], Technology["Java"], Technology["Typescript"], Technology["Javascript"], Technology["Dart"], Technology["C#"], Technology["Python"] ],
+    "web": [ Technology["React"], Technology["Vue.js"], Technology["Node.js"], Technology["Three.js"], Technology["Tailwind CSS"] ],
+    "mobile": [ Technology["Flutter"], Technology["Android SDK"] ],
+    "backend_and_databases": [ Technology["Spring"], Technology["Express.js"], Technology["PostgreSQL"], Technology["MongoDB"], Technology["Firebase"] ],
+    "cloud_providers": [ Technology["AWS"], Technology["Azure"] ],
+    "other": [ Technology["Adobe XD"], Technology["Unity"], Technology["Blender"] ],
 }
 
 export const Technologies: { [key: string]: any[]; } = {

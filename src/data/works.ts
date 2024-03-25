@@ -26,7 +26,7 @@ export const works: WorkType[] = [
         video: null,
         awards: [],
         technologies: [ Technology["React"], Technology["Three.js"], Technology["Node.js"], Technology["Tailwind CSS"], Technology["Blender"], Technology["AWS"] ],
-        category: Category.Web,
+        category: Category.web,
         isPrototype: false,
     },
     {
@@ -45,7 +45,7 @@ export const works: WorkType[] = [
         video: null,
         awards: [],
         technologies: [ Technology["Typescript"], Technology["Kotlin"], Technology["React"], Technology["Tailwind CSS"], Technology["Three.js"], Technology["Blender"], Technology["Spring"], Technology["PostgreSQL"], Technology["AWS"] ],
-        category: Category.Web,
+        category: Category.web,
         isPrototype: false,
     },
     {
@@ -68,7 +68,7 @@ export const works: WorkType[] = [
         video: null,
         awards: [],
         technologies: [ Technology["Flutter"], Technology["Android SDK"], Technology["Dart"], Technology["Kotlin"] ],
-        category: Category.Mobile,
+        category: Category.mobile,
         isPrototype: false,
     },
     {
@@ -105,7 +105,7 @@ export const works: WorkType[] = [
         video: ishopDemo,
         awards: [],
         technologies: [ Technology["Flutter"], Technology["Android SDK"], Technology["Dart"], Technology["Kotlin"], Technology["Node.js"], Technology["Typescript"], Technology["MongoDB"] ],
-        category: Category.Mobile,
+        category: Category.mobile,
         isPrototype: false,
     },
     {
@@ -142,7 +142,7 @@ export const works: WorkType[] = [
         video: ishopsellerDemo,
         awards: [],
         technologies: [ Technology["Flutter"], Technology["Android SDK"], Technology["Dart"], Technology["Kotlin"], Technology["Node.js"], Technology["Typescript"], Technology["MongoDB"] ],
-        category: Category.Mobile,
+        category: Category.mobile,
         isPrototype: false,
     },
     {
@@ -161,7 +161,7 @@ export const works: WorkType[] = [
         video: painpaingoawayDemo,
         awards: [],
         technologies: [ Technology["Unity"], Technology["C#"], Technology["Blender"], Technology["Python"], Technology["OpenCV"] ],
-        category: Category.Game,
+        category: Category.game,
         isPrototype: true,
     },
     {
@@ -180,7 +180,7 @@ export const works: WorkType[] = [
         video: null,
         awards: [],
         technologies: [ Technology["Adobe XD"] ],
-        category: Category.UIUX,
+        category: Category.uiux,
         isPrototype: false,
     },
     {
@@ -199,7 +199,7 @@ export const works: WorkType[] = [
         video: null,
         awards: [],
         technologies: [ Technology["Flutter"], Technology["Android SDK"], Technology["Dart"], Technology["Kotlin"], Technology["Adobe XD"] ],
-        category: Category.Mobile,
+        category: Category.mobile,
         isPrototype: false,
     },
     {
@@ -218,7 +218,7 @@ export const works: WorkType[] = [
         video: elwaseelDemo,
         awards: ["1st prize at HackAlgeria"],
         technologies: [ Technology["Flutter"], Technology["Dart"], Technology["Node.js"], Technology["Typescript"], Technology["MongoDB"], Technology["Azure"] ],
-        category: Category.Mobile,
+        category: Category.mobile,
         isPrototype: true,
     },
     {
@@ -237,7 +237,7 @@ export const works: WorkType[] = [
         video: null,
         awards: ["1st prize at HackAlgeria"],
         technologies: [ Technology["Flutter"], Technology["Dart"], Technology["Firebase"], Technology["Adobe XD"] ],
-        category: Category.Mobile,
+        category: Category.mobile,
         isPrototype: false,
     },
 ];

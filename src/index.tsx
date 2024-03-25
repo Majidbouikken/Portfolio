@@ -11,6 +11,8 @@ import HireMePage from './pages/HireMePage';
 import ForFunPage from './pages/ForFunPage';
 import WorkDetailsPage from './pages/WorkDetailsPage';
 import { workDetailsLoader } from './services/WorkService';
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n';
 
 const router = createBrowserRouter([
   {
@@ -47,14 +49,17 @@ const router = createBrowserRouter([
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-if (localStorage.getItem('darkTheme') || window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  document.documentElement.classList.add('dark')
+if (localStorage.getItem('theme') != null) {
+  document.documentElement.classList.remove('light', 'sunset', 'dark');
+  document.documentElement.classList.add(localStorage.getItem('theme') as string);
 } else {
-  document.documentElement.classList.remove('dark')
+  // window.matchMedia('(prefers-color-scheme: dark)').matches)
 }
 root.render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <I18nextProvider i18n={i18n}>
+      <RouterProvider router={router} />
+    </I18nextProvider>
   </StrictMode>
 );
 

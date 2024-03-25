@@ -9,19 +9,21 @@
         fill: #01ab58;
       }
       .red-flag-color {
-        fill: #e4223a;
+        fill: #eb1d33;
       }
       .white-flag-color {
         fill: #f1f5f9;
       }
     </style>
     <clipPath id="clippath">
-      <rect id="mask" data-name="mask" width="32" height="32" rx="8" ry="8"/>
+      <rect id="mask" width="32" height="32" rx="4" ry="4"/>
     </clipPath>
   </defs>
-  <g id="it-flag" class="flag-clip-mask">
-    <rect class="white-flag-color" x="0" width="32" height="32"/>
-    <rect class="red-flag-color" x="21.33" width="10.67" height="32"/>
-    <rect class="green-flag-color" width="10.67" height="32"/>
+  <g id="it-flag">
+    <g class="flag-clip-mask">
+      <rect class="white-flag-color" x="10.67" width="10.67" height="32"/>
+      <rect class="red-flag-color" x="21.33" width="10.67" height="32"/>
+      <rect class="green-flag-color" width="10.67" height="32"/>
+    </g>
   </g>
 </svg>

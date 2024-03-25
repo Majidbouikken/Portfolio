@@ -1,8 +1,8 @@
 enum Category {
-    Mobile,
-    Web,
-    UIUX,
-    Game
+    mobile,
+    web,
+    uiux,
+    game
 }
 
 export default Category;
