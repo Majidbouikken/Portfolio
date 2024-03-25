@@ -90,12 +90,14 @@ const WorkDetailsPage: React.FC = () => {
                     <div className="flex flex-row gap-4 text-2xl" />
                 </>) : <></>}
                 
+                <div className="divider ms-4" />
                 <section id="hire-me">
                     <Link
                         to="/hire-me"
                         className="flex flex-row gap-2 items-center text-xl text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
+                        style={{ fontWeight: 'bold !imporant' }}
                     >
-                        {t("hire_me")}
+                        {t("hire_me").toUpperCase()}
                         <img src={require('./../assets/icons/3d-send.png')} className="h-8 w-8" />
                     </Link>
                 </section>

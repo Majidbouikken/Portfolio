@@ -4,6 +4,7 @@ import Technology, { TechnologiesByCategories, Technologies } from "../types/Tec
 import { formatDateYearOnly } from "../utils/DateUtils";
 import { educations } from "../data/educations";
 import { useTranslation } from "react-i18next";
+import { ReactComponent as CircularText } from "./../assets/circular-title.svg";
 
 const AboutPage: React.FC = () => {
     const { t } = useTranslation();
@@ -11,9 +12,15 @@ const AboutPage: React.FC = () => {
     return (
         <div id="about-page" className="max-w-7xl mx-auto my-32 px-8">
             <div className="flex flex-col items-baseline gap-32 w-full">
-                <div id="who-am-i" className="flex flex-col w-full mt-auto md:flex-row justify-between items-start md:items-end">
+                <div className="absolute h-36 w-36 items-center justify-center justify-items-center top-24 left-1/2 -translate-x-1/2 -z-10">
+                    <img src={require('./../assets/images/me-2.jpg')} className="absolute h-24 w-24 rounded-full inset-6" />
+                    <CircularText className="absolute h-36 w-36 fill-text-900 dark:fill-text-50 animate-spin-slow" />
+                </div>
+                <div id="who-am-i" className="flex flex-col w-full mt-24 md:flex-row justify-between items-start md:items-end">
                     <h1 className="text-9xl mb-4">{t('hello')}</h1>
-                    <h2 className="max-w-2xl w-full text-end">{t('i_am_abdelmadjid_bouikken')}<br />{t('a_software_engineer_in_paris')}</h2>
+                    <h2 className="relative max-w-2xl w-full text-end">
+                        {t('i_am_abdelmadjid_bouikken')}<br />{t('a_software_engineer_in_paris')}
+                    </h2>
                 </div>
                 <div id="who-am-i" className="flex flex-col gap-8 w-full">
                     <h2>{t('i_am_a_passionate_software_engineer')}</h2>
@@ -100,13 +107,22 @@ const AboutPage: React.FC = () => {
                     </div>
                 </section>
                 <section id="hire-me">
-                    <Link
-                        to="/hire-me"
-                        className="flex flex-row gap-2 items-center text-xl text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
-                    >
-                        {t("hire_me")}
-                        <img src={require('./../assets/icons/3d-send.png')} className="h-8 w-8" />
-                    </Link>
+                    <div className="flex flex-row gap-4">
+                        <button
+                            onClick={() => {}}
+                            className="flex flex-row gap-2 items-center text-xl text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
+                        >
+                            {t('download_cv')}
+                            <img src={require('./../assets/icons/3d-resume.png')} className="h-8 w-8" />
+                        </button>
+                        <Link
+                            to="/hire-me"
+                            className="flex flex-row gap-2 items-center text-xl text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
+                        >
+                            {t("hire_me").toUpperCase()}
+                            <img src={require('./../assets/icons/3d-send.png')} className="h-8 w-8" />
+                        </Link>
+                    </div>
                 </section>
             </div>
         </div>

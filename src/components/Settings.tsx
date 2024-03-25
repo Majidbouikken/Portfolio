@@ -8,11 +8,11 @@ const Flag: React.FC<{ country: string }> = ({ country}) => {
   if (country == "ar") return (<FlagAlgerian className="h-6 w-6" />);
   else if (country == "en") return (<FlagEnglish className="h-6 w-6" />);
   else if (country == "fr") return (<FlagFrench className="h-6 w-6" />);
-  else if (country == "it") return (<FlagItalian className="h-6 w-6" />);
+  // else if (country == "it") return (<FlagItalian className="h-6 w-6" />);
   else if (country == "de") return (<FlagDeutsch className="h-6 w-6" />);
-  else if (country == "es") return (<FlagSpanish className="h-6 w-6" />);
-  else if (country == "pt") return (<FlagPortuguese className="h-6 w-6" />);
-  else if (country == "jp") return (<FlagJapanese className="h-6 w-6" />);
+  // else if (country == "es") return (<FlagSpanish className="h-6 w-6" />);
+  // else if (country == "pt") return (<FlagPortuguese className="h-6 w-6" />);
+  // else if (country == "jp") return (<FlagJapanese className="h-6 w-6" />);
   else return (<FlagArabic className="h-6 w-6" />);
 }
 
@@ -102,9 +102,16 @@ const Settings: React.FC = () => {
           </div>
           <div className="divider-horizontal my-4" />
           <div id="theme-switcher" className="flex flex-row px-4 justify-between">
-            <img onClick={() => toggleTheme('light')} src={require('./../assets/icons/3d-sun.png')} className="h-8 w-8 cursor-pointer" />
-            <img onClick={() => toggleTheme('sunset')} src={require('./../assets/icons/3d-sun.png')} className="h-8 w-8 cursor-pointer" />
-            <img onClick={() => toggleTheme('dark')} src={require('./../assets/icons/3d-moon.png')} className="h-8 w-8 cursor-pointer" />
+            <button onClick={() => toggleTheme('light')} className="flex flex-row items-center gap-2">
+              <img src={require('./../assets/icons/3d-sun.png')} className="h-8 w-8 cursor-pointer" />
+              Light
+            </button>
+            {/* <img onClick={() => toggleTheme('sunset')} src={require('./../assets/icons/3d-sun.png')} className="h-8 w-8 cursor-pointer" /> */}
+            
+            <button onClick={() => toggleTheme('dark')} className="flex flex-row items-center gap-2">
+              <img src={require('./../assets/icons/3d-moon.png')} className="h-8 w-8 cursor-pointer" />
+              Dark
+            </button>
           </div>
         </div>
       </div>

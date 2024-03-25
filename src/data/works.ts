@@ -213,7 +213,7 @@ export const works: WorkType[] = [
         date: new Date(2020, 6),
         description: `A prototype that brings Algerian citizens closer to state institutions at the local and national level through the sharing of projects and news, as well as a proposal of ideas and solutions to everyday problems.`,
         content: "",
-        thumbnail: require(`./../assets/images/thumbnails/mobile.png`),
+        thumbnail: require(`./../assets/images/thumbnails/el-waseel.png`),
         images: [],
         video: elwaseelDemo,
         awards: ["1st prize at HackAlgeria"],

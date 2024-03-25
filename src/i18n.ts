@@ -6,23 +6,23 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 export const LOCALES: {[key: string]: string;} = {
     'en': 'en-UK',
     'fr': 'fr-FR',
-    'it': 'it-IT',
+    // 'it': 'it-IT',
     'de': 'de-DE',
-    'es': 'es-ES',
-    'pt': 'pt-PT',
+    // 'es': 'es-ES',
+    // 'pt': 'pt-PT',
     'ar': 'ar-DZ',
-    'jp': 'jp-JP',
+    // 'jp': 'jp-JP',
 };
 
 export const LANGUAGES: {[key: string]: string;} = {
     'en': 'English',
     'fr': 'Français',
-    'it': 'Italiano',
+    // 'it': 'Italiano',
     'de': 'Deutsch',
-    'es': 'Español',
-    'pt': 'Português',
+    // 'es': 'Español',
+    // 'pt': 'Português',
     'ar': 'العربية',
-    'jp': '日本語',
+    // 'jp': '日本語',
 };
 
 const resources = {
@@ -32,24 +32,24 @@ const resources = {
     fr: {
       translation: require('./locales/fr.json'),
     },
-    it: {
-      translation: require('./locales/it.json'),
-    },
+    // it: {
+    //   translation: require('./locales/it.json'),
+    // },
     de: {
       translation: require('./locales/de.json'),
     },
-    es: {
-      translation: require('./locales/es.json'),
-    },
-    pt: {
-      translation: require('./locales/pt.json'),
-    },
+    // es: {
+    //   translation: require('./locales/es.json'),
+    // },
+    // pt: {
+    //   translation: require('./locales/pt.json'),
+    // },
     ar: {
       translation: require('./locales/ar.json'),
     },
-    jp: {
-      translation: require('./locales/jp.json'),
-    },
+    // jp: {
+    //   translation: require('./locales/jp.json'),
+    // },
   };
 
 i18n

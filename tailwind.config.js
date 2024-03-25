@@ -50,7 +50,8 @@ module.exports = {
         'github': '#24292F',
       },
       animation: {
-        throb: 'throb 2s cubic-bezier(0, 0, 0.1, 1) infinite',
+        'throb': 'throb 2s cubic-bezier(0, 0, 0.1, 1) infinite',
+        'spin-slow': 'spin 24s linear infinite',
       },
       keyframes: {
         throb: {

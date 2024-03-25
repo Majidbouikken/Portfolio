@@ -23,7 +23,7 @@
     "screenshots": "Screenshots",
     "visit_work": "Visit Work",
     "i_am_a_passionate_software_engineer": "I'm a passionate software engineer and creative developer who approaches each project with zeal, crafting digital solutions that seamlessly blend technical expertise with artistic finesse.",
-    "my_aim_is_to_create_products": "My aim is to create products",
+    "my_aim_is_to_create_products": "My aim is to create products that not only work impeccably but also engage and delight users with their elegance and innovation.",
     "technical_stack": "Technical Stack",
     "languages": "Languages",
     "backend_and_databases": "Backend & Databases",
@@ -36,8 +36,9 @@
     "your_fullname": "Your fullname",
     "write_your_message_here": "Write your message here...",
     "send_message": "SEND MESSAGE",
+    "download_cv": "DOWNLOAD CV",
     "your_message_has_been_sent": "Your message has been sent!",
-    "you_can_also_email_me": "Your message has been sent!",
+    "you_can_also_email_me": "You can also email me",
     "or_find_me_at": "Or find me at",
     "404_message": "404 Not found!"
 }
