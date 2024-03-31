@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .flag-clip-mask {
+        clip-path: url(#clippath);
+      }
+      .blue-flag-color {
+        fill: #1e6ab3;
+      }
+      .red-flag-color {
+        fill: #eb1d33;
+      }
+      .white-flag-color {
+        fill: #f1f5f9;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect id="mask" width="32" height="32" rx="4" ry="4"/>
+    </clipPath>
+  </defs>
+  <g id="fr-flag">
+    <g class="flag-clip-mask">
+      <rect class="white-flag-color" x="10.67" width="10.67" height="32"/>
+      <rect class="red-flag-color" x="21.33" width="10.67" height="32"/>
+      <rect class="blue-flag-color" width="10.67" height="32"/>
+    </g>
+  </g>
+</svg>

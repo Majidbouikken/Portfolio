@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 36 24">
+  <defs>
+    <style>
+      .flag-red {
+        fill: #eb1d33;
+      }
+
+      .flag-blue {
+        fill: #1e6ab3;
+      }
+
+      .flag-white {
+        fill: #f1f5f9;
+      }
+    </style>
+  </defs>
+  <g id="fr-flag">
+    <rect class="flag-white" x="0" width="36" height="24"/>
+    <rect class="flag-red" x="24" width="12" height="24"/>
+    <rect class="flag-blue" x="0" width="12" height="24"/>
+  </g>
+</svg>

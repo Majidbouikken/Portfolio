@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .flag-clip-mask {
+        clip-path: url(#clippath);
+      }
+      .red-flag-color {
+        fill: #e4223a;
+      }
+      .white-flag-color {
+        fill: #f1f5f9;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect id="mask" data-name="mask" width="32" height="32" rx="8" ry="8"/>
+    </clipPath>
+  </defs>
+  <g id="jp-flag" class="flag-clip-mask">
+    <rect class="white-flag-color" x="0" width="32" height="32"/>
+    <circle class="red-flag-color" cx="16" cy="16" r="9.6"/>
+  </g>
+</svg>

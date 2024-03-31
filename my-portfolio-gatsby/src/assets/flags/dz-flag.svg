@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .flag-clip-mask {
+        clip-path: url(#clippath);
+      }
+      .green-flag-color {
+        fill: #01ab58;
+      }
+      .red-flag-color {
+        fill: #e4223a;
+      }
+      .white-flag-color {
+        fill: #f1f5f9;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect id="mask" data-name="mask" width="32" height="32" rx="8" ry="8"/>
+    </clipPath>
+  </defs>
+  <g id="dz-flag" class="flag-clip-mask">
+    <rect class="white-flag-color" x="0" width="32" height="32"/>
+    <g id="dz-flag-2" data-name="dz-flag">
+      <rect class="green-flag-color" x="0" width="16" height="32"/>
+    </g>
+    <g>
+      <polygon class="red-flag-color" points="25.13 16 21.64 17.13 21.64 20.8 19.49 17.83 16 18.97 18.16 16 16 13.03 19.49 14.17 21.64 11.2 21.64 14.87 25.13 16"/>
+      <path class="red-flag-color" d="m24.19,20.98c-1.66,2.77-4.72,4.62-8.19,4.62-5.3,0-9.6-4.3-9.6-9.6s4.3-9.6,9.6-9.6c3.47,0,6.53,1.86,8.19,4.62-1.39-1.66-3.49-2.7-5.84-2.7-4.24,0-7.68,3.44-7.68,7.68s3.44,7.68,7.68,7.68c2.35,0,4.45-1.04,5.84-2.7Z"/>
+    </g>
+  </g>
+</svg>
