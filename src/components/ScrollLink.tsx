@@ -1,12 +1,16 @@
-import { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "gatsby-plugin-react-i18next";
+import { ReactNode, useEffect } from "react";
 
 const ScrollLink: React.FC<{ targetId: string, children: ReactNode }> = ({ targetId, children }) => {
     const scrollToComponent = () => {
-        const element = document.getElementById(targetId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        useEffect(() => {
+            if (typeof document !== "undefined") {
+                const element = document.getElementById(targetId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+          });
       };
     
     return (<Link 
