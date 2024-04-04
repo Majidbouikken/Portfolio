@@ -1,35 +1,47 @@
-export { ReactComponent as FlagArabic } from "./assets/flags/ar-flag.svg";
-export { ReactComponent as FlagAlgerian } from "./assets/flags/dz-flag.svg";
-export { ReactComponent as FlagDeutsch } from "./assets/flags/de-flag.svg";
-export { ReactComponent as FlagEnglish } from "./assets/flags/en-flag.svg";
-export { ReactComponent as FlagFrench } from "./assets/flags/fr-flag.svg";
-export { ReactComponent as FlagItalian } from "./assets/flags/it-flag.svg";
-export { ReactComponent as FlagSpanish } from "./assets/flags/es-flag.svg";
-export { ReactComponent as FlagPortuguese } from "./assets/flags/pt-flag.svg";
-export { ReactComponent as FlagJapanese } from "./assets/flags/jp-flag.svg";
-export { ReactComponent as IconArrowUp } from './assets/icons/arrow-up.svg';
-export { ReactComponent as IconArrowLeft } from './assets/icons/arrow-left.svg';
-export { ReactComponent as IconArrowRight } from './assets/icons/arrow-right.svg';
-export { ReactComponent as IconArrowDown } from './assets/icons/arrow-down.svg';
-export { ReactComponent as IconChevronUp } from './assets/icons/chevron-up.svg';
-export { ReactComponent as IconChevronLeft } from './assets/icons/chevron-left.svg';
-export { ReactComponent as IconChevronRight } from './assets/icons/chevron-right.svg';
-export { ReactComponent as IconChevronDown } from './assets/icons/chevron-down.svg';
-export { ReactComponent as IconClose } from './assets/icons/close-icon.svg';
-export { ReactComponent as IconCookies } from './assets/icons/cookies-icon.svg';
-export { ReactComponent as IconInstagram } from './assets/icons/social-instagram-icon.svg';
-export { ReactComponent as IconGithub } from './assets/icons/social-github-icon.svg';
-export { ReactComponent as IconUpwork } from './assets/icons/social-upwork-icon.svg';
-export { ReactComponent as IconLinkedin } from './assets/icons/social-linkedin-icon.svg';
-export { ReactComponent as IconSmallDot } from './assets/icons/small-dot-icon.svg';
-export { ReactComponent as IconNewsLetter } from './assets/icons/newsletter-icon.svg';
-export { ReactComponent as IconHealthCategory } from './assets/icons/category-health-icon.svg';
-export { ReactComponent as IconScienceCategory } from './assets/icons/category-science-icon.svg';
-export { ReactComponent as IconWellbeingCategory } from './assets/icons/category-wellbeing-icon.svg';
-export { ReactComponent as IconShare } from './assets/icons/share-icon.svg';
-export { ReactComponent as IconPlay } from './assets/icons/play-icon.svg';
-export { ReactComponent as IconTag } from './assets/icons/tag-icon.svg';
-export { ReactComponent as IconLanguage } from './assets/icons/language-icon.svg';
-export { ReactComponent as IconDarkTheme } from './assets/icons/dark-theme-icon.svg';
-export { ReactComponent as IconLightTheme } from './assets/icons/light-theme-icon.svg';
-export { ReactComponent as IconMenu } from './assets/icons/menu-icon.svg';
+import FlagArabic from "@/assets/flags/ar-flag.svg";
+import FlagAlgerian from "@/assets/flags/dz-flag.svg";
+import FlagDeutsch from "@/assets/flags/de-flag.svg";
+import FlagEnglish from "@/assets/flags/en-flag.svg";
+import FlagFrench from "./assets/flags/fr-flag.svg";
+import FlagItalian from "./assets/flags/it-flag.svg";
+import FlagSpanish from "./assets/flags/es-flag.svg";
+import FlagPortuguese from "./assets/flags/pt-flag.svg";
+import FlagJapanese from "./assets/flags/jp-flag.svg";
+import IconArrowUp from './assets/icons/arrow-up.svg';
+import IconArrowLeft from './assets/icons/arrow-left.svg';
+import IconArrowRight from './assets/icons/arrow-right.svg';
+import IconArrowDown from './assets/icons/arrow-down.svg';
+import IconChevronUp from './assets/icons/chevron-up.svg';
+import IconChevronLeft from './assets/icons/chevron-left.svg';
+import IconChevronRight from './assets/icons/chevron-right.svg';
+import IconChevronDown from './assets/icons/chevron-down.svg';
+import IconClose from './assets/icons/close-icon.svg';
+import IconInstagram from './assets/icons/social-instagram-icon.svg';
+import IconGithub from './assets/icons/social-github-icon.svg';
+import IconUpwork from './assets/icons/social-upwork-icon.svg';
+import IconLinkedin from './assets/icons/social-linkedin-icon.svg';
+
+export {
+    FlagArabic,
+    FlagAlgerian,
+    FlagDeutsch,
+    FlagEnglish,
+    FlagFrench,
+    FlagItalian,
+    FlagSpanish,
+    FlagPortuguese,
+    FlagJapanese,
+    IconArrowUp,
+    IconArrowLeft,
+    IconArrowRight,
+    IconArrowDown,
+    IconChevronUp,
+    IconChevronLeft,
+    IconChevronRight,
+    IconChevronDown,
+    IconClose,
+    IconInstagram,
+    IconGithub,
+    IconUpwork,
+    IconLinkedin
+};

@@ -1,12 +1,12 @@
 import { LoaderFunctionArgs } from "react-router-dom";
 import { works } from "../data/works";
-import WorkType from "../types/Work";
+import Work from "../types/Work";
 
 interface FetchWorkParams {
     title: string;
 }
 
-function fetchWorkByTitle(title: string): WorkType | undefined {
+function fetchWorkByTitle(title: string): Work | undefined {
     return works.find(work => work.title === title);
 }
 

@@ -8,10 +8,10 @@ const submitMessage = async (data: HireMeForm) => {
         createDate: new Date(),
     })
     .then((docRef) => {
-        console.log("Message written with ID: ", docRef.id);
+        // console.log("Message written with ID: ", docRef.id);
     })
     .catch((error) => {
-        console.error("Error adding document: ", error);
+        // console.error("Error adding document: ", error);
     });
 }
 
