@@ -7,25 +7,11 @@ require("dotenv").config({
 })
 
 const config: GatsbyConfig = {
-  flags: {
-    DEV_SSR: true,
-  },
   plugins: [
     `gatsby-plugin-postcss`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-pnpm-gatsby-5`,
-    //   options: {
-    //     projectPath: path.dirname(__dirname), // use parent directory as project root
-    //     include: [
-    //       `abdelmadjid-portfolio`,
-    //       `path/to/my/private/webpack/loaders` // <- resolve from this directory
-    //     ],
-    //     strict: true
-    //   }
-    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

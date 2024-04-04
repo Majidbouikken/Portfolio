@@ -13,14 +13,6 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   });
 };
 
-// exports.onCreatePage = ({ page, actions }) => {
-//   if (process.env.NODE_ENV !== `production` && page.path === `/dev-404-page/`) {
-//     const { createPage } = actions
-//     page.matchPath = `/*`
-//     createPage(page)
-//   }
-// }
-
 exports.createPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
   query Works {
