@@ -1,7 +1,8 @@
 import Technology, { TechnologiesByCategories, Technologies } from "../types/Technology";
-import { formatDateYearOnly } from "../utils/DateUtils";
+import Layout from "@/layout/layout";
 import CircularText from "@/assets/circular-title.svg";
-import Layout from "../layout/layout";
+import ResumeButton from "@/components/ResumeButton";
+import { formatDateYearOnly } from "@/utils/DateUtils";
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 import { PageProps, graphql } from "gatsby";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
@@ -58,7 +59,7 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
   return (
       <Layout>
           <div id="about-page" className="max-w-7xl mx-auto my-32 px-8">
-              <div className="flex flex-col items-baseline gap-32 w-full">
+              <div className="flex flex-col items-start gap-16 md:gap-32 w-full">
                   <div className="absolute h-36 w-36 items-center justify-center justify-items-center top-24 left-1/2 -translate-x-1/2 -z-10">
                       <GatsbyImage image={gatsbyImageData} alt="avatar" className="!absolute h-24 w-24 rounded-full inset-6" />
                       <div className="absolute h-36 w-36 fill-text-900 dark:fill-text-50 animate-spin-slow"><CircularText /></div>
@@ -73,6 +74,17 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                       <h2>{t('i_am_a_passionate_software_engineer')}</h2>
                       <h2>{t('my_aim_is_to_create_products')}</h2>
                   </div>
+                  <section id="hiring-and-cv">
+                      <div className="flex flex-col md:flex-row gap-4 items-start">
+                          <ResumeButton />
+                          <Link to="/hire-me"
+                              className="flex flex-row gap-2 items-center text-xl text-text-800 dark:text-text-50 hover:text-text-50 !font-medium bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
+                          >
+                              {t("hire_me").toUpperCase()}
+                              <img src={"/3d-icons/3d-send.png"} className="h-8 w-8" />
+                          </Link>
+                      </div>
+                  </section>
                   <section id="technical-stack" className="space-y-4 w-full">
                       <h1>{t('technical_stack')}</h1>
                       <div>
@@ -116,7 +128,7 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                                       <div className="mb-8 tooltip-container">
                                           <h2>{experience.frontmatter.title}</h2>
                                           <a href={experience.frontmatter.companyWebsite} target="_blank" className="text-text-800 dark:text-text-100 hover:text-text-900 dark:hover:text-text-50 hover:underline transition-colors duration-500">
-                                              {experience.frontmatter.company}
+                                              {experience.frontmatter.company} • {experience.frontmatter.location}
                                           </a>
                                           <div className="tooltip tooltip-below">{experience.frontmatter.description}</div>
                                       </div>
@@ -143,7 +155,7 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                                       {/* Diploma and University */}
                                       <div className="mb-8 tooltip-container">
                                           <h2>{education.frontmatter.diploma} - {education.frontmatter.title}</h2>
-                                          <a href={'education.universityWebsite'} target="_blank" className="text-text-800 dark:text-text-100 hover:text-text-900 dark:hover:text-text-50 hover:underline transition-colors duration-500">
+                                          <a className="text-text-800 dark:text-text-100">
                                               {education.frontmatter.university} • {education.frontmatter.location}
                                           </a>
                                           <div className="tooltip tooltip-below">{education.frontmatter.description}</div>
@@ -153,17 +165,11 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                           }
                       </div>
                   </section>
-                  <section id="hire-me">
-                      <div className="flex flex-row gap-4">
-                          <button
-                              onClick={() => { }}
-                              className="flex flex-row gap-2 items-center text-xl text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
-                          >
-                              {t('download_cv')}
-                              <img src={"/3d-icons/3d-resume.png"} className="h-8 w-8" />
-                          </button>
+                  <section id="hiring-and-cv">
+                      <div className="flex flex-col md:flex-row gap-4 items-start">
+                          <ResumeButton />
                           <Link to="/hire-me"
-                              className="flex flex-row gap-2 items-center text-xl text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
+                              className="flex flex-row gap-2 items-center text-xl font-medium text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
                           >
                               {t("hire_me").toUpperCase()}
                               <img src={"/3d-icons/3d-send.png"} className="h-8 w-8" />

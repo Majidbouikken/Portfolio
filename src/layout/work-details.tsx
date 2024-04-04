@@ -47,7 +47,7 @@ const WorkDetails = ({ data: { work } }: PageProps<WorkDetailsDataProps>) => {
                     <WorkNavBar sections={sections} link={""} />
                 }
                 <div className="flex flex-col items-start gap-8">
-                    <div className="grid grid-flow-row grid-cols-2 w-full">
+                    <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 w-full">
                         <div className="flex flex-col items-start">
                             <Link to={'/works'} className="text-xl md:text-2xl text-text-500 hover:text-text-900 dark:text-text-400 dark:hover:text-text-50 focus:text-primary-500 cursor-pointer transition-colors duration-500">{t('works')}/</Link>
                             <h1 className="max-w-5xl">{work.frontmatter.title}</h1>
@@ -125,8 +125,7 @@ const WorkDetails = ({ data: { work } }: PageProps<WorkDetailsDataProps>) => {
                     <section id="hire-me">
                         <Link
                             to="/hire-me"
-                            className="flex flex-row gap-2 items-center text-xl text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
-                            style={{ fontWeight: 'bold !imporant' }}
+                            className="flex flex-row gap-2 items-center text-xl font-medium text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
                         >
                             {t("hire_me").toUpperCase()}
                             <img src={"/3d-icons/3d-send.png"} className="h-8 w-8" />

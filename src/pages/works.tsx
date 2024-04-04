@@ -1,11 +1,11 @@
-import WorkCard from '../components/WorkCard';
 import { useState } from 'react';
-import Category from '../types/Category';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Layout from '@/layout/layout';
+import WorkCard from '../components/WorkCard';
+import Category from '../types/Category';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { PageProps, graphql } from 'gatsby';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
+import './index.css';
 
 interface WorksDataProps {
     allworks: {

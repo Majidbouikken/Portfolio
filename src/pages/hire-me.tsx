@@ -59,10 +59,11 @@ const HireMePage: React.FC = () => {
                         </div>}
                     </div>
 
-                    <div className="grid grid-flow-col grid-rows-4 md:grid-rows-2 gap-y-2 gap-x-8">
+                    <div className="grid grid-flow-col justify-items-start grid-rows-4 md:grid-rows-2 gap-y-2 gap-x-8">
                         <div className="grid-item mt-auto">{t('you_can_also_email_me')}</div>
-                        <a href="mailto:bouikkenmajid.com" className="text-xl text-text-800 dark:text-text-50 px-4 py-2 border-background-400/50 hover:border-background-400 dark:border-background-600/50 dark:hover:border-background-600 border-2 rounded-full transition-colors duration-500">bouikkenmajid@gmail.com</a>
-
+                        <a href="mailto:bouikkenmajid.com" className="text-xl text-text-800 dark:text-text-50 px-4 py-2 border-background-400/50 hover:border-background-400 dark:border-background-600/50 dark:hover:border-background-600 border-2 rounded-full transition-colors duration-500">
+                            bouikkenmajid@gmail.com
+                        </a>
                         <div className="grid-item mt-auto">{t('or_find_me_at')}</div>
                         <div className="grid-item flex flex-wrap gap-4">
                             <a href="https://www.linkedin.com/in/abdelmadjid-bouikken/" target="_blank" className="h-12 w-12 fill-text-800 dark:fill-text-50 hover:fill-white p-2 hover:bg-linkedin border-background-400/50 dark:border-background-600/50 hover:border-linkedin dark:hover:border-linkedin border-2 rounded-full"><IconLinkedin /></a>

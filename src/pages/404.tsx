@@ -1,5 +1,6 @@
 import { graphql } from "gatsby";
 import { useTranslation } from "react-i18next";
+import './index.css';
 
 const NotFound = () => {
   const { t, i18n } = useTranslation();

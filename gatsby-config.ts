@@ -7,6 +7,9 @@ require("dotenv").config({
 })
 
 const config: GatsbyConfig = {
+  flags: {
+    DEV_SSR: true,
+  },
   plugins: [
     `gatsby-plugin-postcss`,
     `gatsby-transformer-remark`,
@@ -42,6 +45,13 @@ const config: GatsbyConfig = {
       options: {
         path: `${__dirname}/src/locales`,
         name: `locale`
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/downloadable`,
+        name: `downloadable`
       },
     },
     {

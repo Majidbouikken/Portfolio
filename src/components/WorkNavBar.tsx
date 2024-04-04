@@ -2,17 +2,14 @@ import { useTranslation } from "react-i18next";
 import { IconArrowUp, IconChevronUp } from "../icons";
 import HeaderLink from "./HeaderLink";
 import ScrollLink from "./ScrollLink";
-import { useEffect } from "react";
 
 const WorkNavBar: React.FC<{sections: string[], link: string | null}> = ({sections, link}) => {
     const { t } = useTranslation();
 
     const scrollBackToTop = () => {
-        useEffect(() => {
-            if (typeof window !== "undefined") {
-                window.scroll({ top: 0, behavior: 'smooth' });
-            }
-        });
+        if (typeof window !== "undefined") {
+            window.scroll({ top: 0, behavior: 'smooth' });
+        }
     }
 
     return (

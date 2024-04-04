@@ -47,9 +47,11 @@ const Settings: React.FC = () => {
   }, []);
 
   const toggleTheme = (theme: string) => {
-    localStorage.setItem('theme', theme);
-    // document.documentElement.classList.remove('light', 'sunset', 'dark');
-    // document.documentElement.classList.add(theme);
+    if (typeof document !== "undefined") {
+      localStorage.setItem('theme', theme);
+      document.documentElement.classList.remove('light', 'sunset', 'dark');
+      document.documentElement.classList.add(theme);
+    }
   };
 
   return (
@@ -69,7 +71,7 @@ const Settings: React.FC = () => {
               to="/works"
               rel="preload"
               className={`flex flex-row justify-start gap-4 px-4 py-2 text-sm font-semibold ${
-                (location.pathname === '/works/') ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-400 dark:hover:text-text-50' : 'text-text-500 dark:text-text-400 hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
+                (location.pathname.includes('works/')) ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-400 dark:hover:text-text-50' : 'text-text-500 dark:text-text-400 hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
               }`}
             >
               {t("works")}
@@ -78,7 +80,7 @@ const Settings: React.FC = () => {
               key="about"
               to="/about"
               className={`flex flex-row justify-start gap-4 px-4 py-2 text-sm font-semibold ${
-                (location.pathname === '/about/') ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-500 dark:hover:text-text-50' : 'text-text-500 dark:text-text-400 hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
+                (location.pathname.includes('about/')) ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-500 dark:hover:text-text-50' : 'text-text-500 dark:text-text-400 hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
               }`}
             >
               {t("about")}
@@ -88,7 +90,7 @@ const Settings: React.FC = () => {
               to="/hire-me"
               rel="preload"
               className={`flex flex-row justify-start gap-4 px-4 py-2 text-sm font-semibold ${
-                (location.pathname === '/hire-me/') ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-500 dark:hover:text-text-50' : 'text-text-500 dark:text-text-400 hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
+                (location.pathname.includes('hire-me/')) ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-500 dark:hover:text-text-50' : 'text-text-500 dark:text-text-400 hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
               }`}
             >
               {t("hire_me")}
@@ -115,12 +117,12 @@ const Settings: React.FC = () => {
           <div id="theme-switcher" className="flex flex-row px-4 justify-between">
             <button onClick={() => toggleTheme('light')} className="flex flex-row items-center gap-2">
               <img src="/3d-icons/3d-sun.png" className="h-8 w-8 cursor-pointer" />
-              <a>{t('light')}</a>
+              <a className="text-text-500 dark:text-text-400">{t('light')}</a>
             </button>
             {/* <img onClick={() => toggleTheme('sunset')} src="/3d-icons/3d-sun.png" className="h-8 w-8 cursor-pointer" /> */}
             <button onClick={() => toggleTheme('dark')} className="flex flex-row items-center gap-2">
               <img src="/3d-icons/3d-moon.png" className="h-8 w-8 cursor-pointer" />
-              <a>{t('dark')}</a>
+              <a className="text-text-500 dark:text-text-400">{t('dark')}</a>
             </button>
           </div>
         </div>
