@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import Layout from '@/layout/layout';
-import WorkCard from '../components/WorkCard';
-import Category from '../types/Category';
+import WorkCard from '@/components/WorkCard';
+import Category from '@/types/Category';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { PageProps, graphql } from 'gatsby';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
+import { SEO } from '@/components/seo';
 import './index.css';
 
 interface WorksDataProps {
@@ -14,12 +15,6 @@ interface WorksDataProps {
                 title: string;
                 subtitle: string;
                 category: string;
-                // roles: string[];
-                // collaborators: string[];
-                // company: string;
-                // date: Date;
-                // awards: string[];
-                // technologies: string[];
                 slug: string;
                 thumb: {
                     childImageSharp: {
@@ -42,6 +37,7 @@ const WorksPage = ({ data: { allworks } }: PageProps<WorksDataProps>) => {
 
     return (
         <Layout>
+            <SEO title={`${t('works')} | ${t('title')}`} description={t('website_description')} pathname="/works/" />
             <div id="works-page" className="max-w-7xl mx-auto my-32 px-8">
                 <div className="flex flex-col items-start gap-4">
                     <h1 className="max-w-5xl">{t('here_you_can_find_all_my_works_and_projects')}</h1>
@@ -68,11 +64,6 @@ const WorksPage = ({ data: { allworks } }: PageProps<WorksDataProps>) => {
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                         { filteredWorks.map((work, index) => (<WorkCard key={`work-${index}`} work={work.frontmatter} />)) }
                     </div>
-                    {/* <TransitionGroup>
-                      <CSSTransition key={selectedCategory} classNames="fade" timeout={300}>
-                            
-                      </CSSTransition>
-                    </TransitionGroup> */}
                 </div>
             </div>
         </Layout>

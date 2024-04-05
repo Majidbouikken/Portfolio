@@ -1,11 +1,13 @@
-import ArticleComponent from "../components/ArticleComponent";
-import { PageProps, graphql } from 'gatsby';
-import WorkNavBar from "../components/WorkNavBar";
-import GalleryViewer from "../components/GalleryViewer";
-import { Technologies } from "../types/Technology";
+import ArticleComponent from "@/components/ArticleComponent";
 import Layout from "./layout";
+import WorkNavBar from "@/components/WorkNavBar";
+import GalleryViewer from "@/components/GalleryViewer";
+import { Technologies } from "@/types/Technology";
+import { PageProps, graphql } from 'gatsby';
 import { Link, useTranslation } from "gatsby-plugin-react-i18next";
 import { IGatsbyImageData } from "gatsby-plugin-image";
+import { SEO } from "@/components/seo";
+import '@/pages/index.css';
 
 interface WorkDetailsDataProps {
     work: {
@@ -42,6 +44,7 @@ const WorkDetails = ({ data: { work } }: PageProps<WorkDetailsDataProps>) => {
 
     return (
         <Layout>
+            <SEO title={`${work.frontmatter.title} | ${t('title')}`} description={t('website_description')} pathname={`/works/${work.frontmatter.slug}/`} />
             <div id="work-details-page" className="max-w-7xl mx-auto my-32 p-8">
                 {("works[3].link" == null && sections.length === 0) &&
                     <WorkNavBar sections={sections} link={""} />

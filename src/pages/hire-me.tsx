@@ -1,11 +1,13 @@
-import { ChangeEvent, ChangeEventHandler, useState } from "react";
-import LoadingBalls from "../components/LoadingBalls";
-import { IconGithub, IconInstagram, IconLinkedin, IconUpwork } from "../icons";
-import submitMessage from "../services/HireMeService";
-import HireMeForm from "../types/HireMeForm";
+import { ChangeEvent, useState } from "react";
 import Layout from "@/layout/layout";
+import LoadingBalls from "@/components/LoadingBalls";
+import submitMessage from "@/services/HireMeService";
+import HireMeForm from "@/types/HireMeForm";
+import { IconGithub, IconInstagram, IconLinkedin, IconUpwork } from "@/icons";
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql } from "gatsby";
+import { SEO } from "@/components/seo";
+import './index.css';
 
 const HireMePage: React.FC = () => {
     const [ loading, setLoading ] = useState(false);
@@ -38,6 +40,7 @@ const HireMePage: React.FC = () => {
 
     return (
         <Layout>
+            <SEO title={`${t('hire_me')} | ${t('title')}`} description={t('website_description')} pathname="/hire-me/" />
             <div id="hire-me-page" className="max-w-7xl mx-auto my-32 px-8">
                 <div className="flex flex-col items-start gap-4">
                     <h1 className="mb-4">{t('let_us_work_together')}</h1>

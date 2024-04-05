@@ -66,7 +66,10 @@ const config: GatsbyConfig = {
     }
   ],
   siteMetadata: {
-    siteUrl: `http://localhost:8000/`,
+    siteUrl: `https://abdelmadjid.me`,
+    title: `Abdelmadjid's Portfolio`,
+    description: `A software engineer's portfolio showcasing professional accomplishments, skills, and projects.`,
+    image: `3d-icons/3d-cog.png`,
     available: true,
     location: "Paris, France",
     timezone: "Europe/Paris",

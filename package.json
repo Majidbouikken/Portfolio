@@ -1,14 +1,14 @@
 {
   "name": "abdelmadjid-portfolio",
-  "description": "A TypeScript starter for Gatsby that includes all you need to build amazing projects",
+  "description": "A software engineer's portfolio showcasing professional accomplishments, skills, and projects.",
   "version": "1.0.0",
   "private": true,
   "author": "Abdelmadjid Bouikken Bahi Amar <bouikkenmajid@gmail.com> (https://abdelmadjid.me)",
   "license": "MIT",
   "keywords": [
     "gatsby",
-    "starter",
-    "typescript"
+    "typescript",
+    "tailwind"
   ],
   "scripts": {
     "start": "gatsby develop",
