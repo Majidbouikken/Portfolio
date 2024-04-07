@@ -8,6 +8,7 @@ import { PageProps, graphql } from "gatsby";
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { SEO } from "@/components/seo";
 import './index.css';
+import { IconGithub, IconLinkedin } from "@/icons";
 
 interface AboutDataProps {
     avatar: {
@@ -72,9 +73,9 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                             {t('i_am_abdelmadjid_bouikken')}<br />{t('a_software_engineer_in_paris')}
                         </h2>
                     </div>
-                    <div id="who-am-i" className="flex flex-col gap-8 w-full">
-                        <h2>{t('i_am_a_passionate_software_engineer')}</h2>
-                        <h2>{t('my_aim_is_to_create_products')}</h2>
+                    <div id="who-am-i" className="flex flex-col gap-32 w-full">
+                        <h1>{t('i_am_a_passionate_software_engineer')}</h1>
+                        <h1>{t('my_aim_is_to_create_products')}</h1>
                     </div>
                     <section id="hiring-and-cv">
                         <div className="flex flex-col md:flex-row gap-4 items-start">
@@ -85,6 +86,10 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                                 {t("hire_me").toUpperCase()}
                                 <img src={"/3d-icons/3d-send.png"} className="h-8 w-8" />
                             </Link>
+                            <div className="flex flex-row gap-2">
+                                <a href="https://www.linkedin.com/in/abdelmadjid-bouikken/" target="_blank" className="h-12 w-12 fill-text-800 dark:fill-text-50 hover:fill-white p-2 hover:bg-linkedin border-background-400/50 dark:border-background-600/50 hover:border-linkedin dark:hover:border-linkedin border-2 rounded-full"><IconLinkedin /></a>
+                                <a href="https://www.github.com/majidbouikken/" target="_blank" className="h-12 w-12 fill-text-800 dark:fill-text-50 hover:fill-white p-2 hover:bg-github border-background-400/50 dark:border-background-600/50 hover:border-github dark:hover:border-github border-2 rounded-full"><IconGithub /></a>
+                            </div>
                         </div>
                     </section>
                     <section id="technical-stack" className="space-y-4 w-full">
