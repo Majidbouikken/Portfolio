@@ -25,4 +25,4 @@ slug: el-waseel
 language: fr
 ---
 
-# El Waseel
+## Plus d'informations sur le projet seront ajoutées bientôt...

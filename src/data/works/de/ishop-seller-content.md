@@ -37,4 +37,4 @@ slug: ishop-seller
 language: de
 ---
 
-# iShop - Verkäufer-App
+## Weitere Informationen zum Projekt werden bald hinzugefügt...

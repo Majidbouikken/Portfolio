@@ -33,4 +33,4 @@ slug: ishop
 language: en
 ---
 
-# iShop
+## More info about the project to be added soon...

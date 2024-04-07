@@ -37,4 +37,4 @@ slug: ishop-seller
 language: fr
 ---
 
-# iShop - Application du vendeur
+## Plus d'informations sur le projet seront ajoutées bientôt...

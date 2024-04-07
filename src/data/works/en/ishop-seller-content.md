@@ -37,4 +37,4 @@ slug: ishop-seller
 language: en
 ---
 
-# iShop Seller
+## More info about the project to be added soon...

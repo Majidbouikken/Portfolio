@@ -22,4 +22,4 @@ slug: hypefury-companion-app
 language: en
 ---
 
-# Hypefury
+## More info about the project to be added soon...

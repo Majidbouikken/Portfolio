@@ -18,4 +18,4 @@ slug: my-portfolio
 language: en
 ---
 
-# My Portfolio
+## More info about the project to be added soon...

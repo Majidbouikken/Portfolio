@@ -16,4 +16,4 @@ slug: vahk
 language: fr
 ---
 
-# Vähk
+## Plus d'informations sur le projet seront ajoutées bientôt...
