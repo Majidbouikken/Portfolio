@@ -50,7 +50,7 @@ const ResumeButton: React.FC = () => {
   return (
     <a href={downloadURL}
       download
-      className="flex flex-row gap-2 items-center text-xl font-medium text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
+      className="flex flex-row gap-2 items-center text-xl !font-semibold text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
     >
       {t("download_cv")}
       <img src={"/3d-icons/3d-resume.png"} className="h-8 w-8" />
