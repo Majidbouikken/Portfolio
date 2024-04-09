@@ -1,7 +1,7 @@
 import Technology, { TechnologiesByCategories, Technologies } from "../types/Technology";
 import Layout from "@/layout/layout";
 import CircularText from "@/assets/circular-title.svg";
-import ResumeButton from "@/components/ResumeButton";
+import ResumeButton from "@/components/resume-button";
 import { formatDateYearOnly } from "@/utils/DateUtils";
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 import { PageProps, graphql } from "gatsby";
@@ -81,7 +81,7 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                         <div className="flex flex-col md:flex-row gap-4 items-start">
                             <ResumeButton />
                             <Link to="/hire-me"
-                                className="flex flex-row gap-2 items-center text-xl text-text-800 dark:text-text-50 hover:text-text-50 !font-medium bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
+                                className="flex flex-row gap-2 items-center text-xl !font-semibold text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
                             >
                                 {t("hire_me").toUpperCase()}
                                 <img src={"/3d-icons/3d-send.png"} className="h-8 w-8" />
@@ -133,7 +133,7 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                                         <h2>{formatDateYearOnly(experience.frontmatter.startDate)}</h2>
                                         {/* Role and Company */}
                                         <div className="mb-8 tooltip-container">
-                                            <h2>{experience.frontmatter.title}</h2>
+                                            <h2 className="!font-normal">{experience.frontmatter.title}</h2>
                                             <a href={experience.frontmatter.companyWebsite} target="_blank" className="text-text-800 dark:text-text-100 hover:text-text-900 dark:hover:text-text-50 hover:underline transition-colors duration-500">
                                                 {experience.frontmatter.company} • {experience.frontmatter.location}
                                             </a>
@@ -161,7 +161,7 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                                         <h2>{formatDateYearOnly(education.frontmatter.endDate)}</h2>
                                         {/* Diploma and University */}
                                         <div className="mb-8 tooltip-container">
-                                            <h2>{education.frontmatter.diploma} - {education.frontmatter.title}</h2>
+                                            <h2 className="!font-normal">{education.frontmatter.diploma} - {education.frontmatter.title}</h2>
                                             <a className="text-text-800 dark:text-text-100">
                                                 {education.frontmatter.university} • {education.frontmatter.location}
                                             </a>
@@ -176,7 +176,7 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                         <div className="flex flex-col md:flex-row gap-4 items-start">
                             <ResumeButton />
                             <Link to="/hire-me"
-                                className="flex flex-row gap-2 items-center text-xl font-medium text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
+                                className="flex flex-row gap-2 items-center text-xl !font-semibold text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
                             >
                                 {t("hire_me").toUpperCase()}
                                 <img src={"/3d-icons/3d-send.png"} className="h-8 w-8" />

@@ -53,7 +53,7 @@ const Availability: React.FC = () => {
                 <div className="absolute m-auto h-2 w-2 bg-red-400 rounded-full" />
             </div>)
         }
-        <div className="text-text-500 dark:text-text-400 font-semibold">
+        <div className="text-text-500 dark:text-text-400">
             {available? t('open_for_work') : t('not_available')}
         </div>
         <div className="hidden sm:block md:hidden lg:block absolute start-full px-4 text-nowrap transition-all -translate-x-4 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 duration-500 delay-300 pointer-events-none">
