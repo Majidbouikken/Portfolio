@@ -32,8 +32,9 @@ p {
   font-weight: 400;
 }
 h1 {
-  font-size: theme('fontSize.3xl');
   color: theme('colors.text.900');
+  font-size: theme('fontSize.3xl');
+  line-height: 1.25;
   font-weight: 200;
 }
 .dark h1 {
@@ -43,6 +44,7 @@ h1 {
 h2 {
   color: theme('colors.text.900');
   font-size: theme('fontSize.2xl');
+  line-height: 1.25;
   font-weight: 200;
 }.dark h2 {
   color: theme('colors.text.50');
@@ -109,6 +111,7 @@ button {
   }
   h2 {
     font-size: theme('fontSize.3xl');
+    font-weight: 200 !important;
   }
 }
 @media screen and (min-width: theme('screens.md')) {

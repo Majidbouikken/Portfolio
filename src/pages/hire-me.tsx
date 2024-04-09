@@ -43,7 +43,7 @@ const HireMePage: React.FC = () => {
             <SEO title={`${t('hire_me')} | ${t('title')}`} description={t('website_description')} pathname="/hire-me/" />
             <div id="hire-me-page" className="max-w-7xl mx-auto my-32 px-8">
                 <div className="flex flex-col items-start gap-4">
-                    <h1 className="mb-4">{t('let_us_work_together')}</h1>
+                    <h1 className="!font-semibold md:!font-extralight">{t('let_us_work_together')}</h1>
                     <div className="flex flex-col items-start gap-4 w-full">
                         <input onChange={handleFullnameChange} placeholder={t('your_fullname')} className="text-2xl max-w-3xl w-full resize-none overflow-y-auto bg-transparent outline-none" style={{visibility: success? 'hidden': 'visible' }} />
                         <textarea onChange={handleMessageChange} placeholder={t('write_your_message_here')} className="text-2xl h-40 max-w-3xl w-full resize-none overflow-y-auto bg-transparent outline-none" style={{visibility: success? 'hidden': 'visible' }} />

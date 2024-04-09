@@ -40,7 +40,7 @@ const WorksPage = ({ data: { allworks } }: PageProps<WorksDataProps>) => {
             <SEO title={`${t('works')} | ${t('title')}`} description={t('website_description')} pathname="/works/" />
             <div id="works-page" className="max-w-7xl mx-auto my-32 px-8">
                 <div className="flex flex-col items-start gap-4">
-                    <h1 className="max-w-5xl">{t('here_you_can_find_all_my_works_and_projects')}</h1>
+                    <h1 className="max-w-5xl !font-semibold md:!font-extralight">{t('here_you_can_find_all_my_works_and_projects')}</h1>
                     <div className="flex flex-wrap gap-4 text-xl md:text-2xl">
                         <a
                             key={0}

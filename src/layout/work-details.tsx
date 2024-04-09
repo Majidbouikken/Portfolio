@@ -53,20 +53,20 @@ const WorkDetails = ({ data: { work } }: PageProps<WorkDetailsDataProps>) => {
                     <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 w-full">
                         <div className="flex flex-col items-start">
                             <Link to={'/works'} className="text-xl md:text-2xl text-text-500 hover:text-text-900 dark:text-text-400 dark:hover:text-text-50 focus:text-primary-500 cursor-pointer transition-colors duration-500">{t('works')}/</Link>
-                            <h1 className="max-w-5xl">{work.frontmatter.title}</h1>
+                            <h1 className="max-w-5xl !font-semibold md:!font-extralight">{work.frontmatter.title}</h1>
                         </div>
-                        <div className="flex flex-col gap-12 items-end">
-                            <div className="flex flex-col gap-2 items-end">
+                        <div className="flex flex-col gap-8 items-end">
+                            <div className="flex flex-col gap-0 items-end">
                                 <h4 className="text-xl md:text-2xl text-end text-text-500 dark:text-text-400">{t('role')}</h4>
                                 <h3 className="text-xl md:text-2xl text-end">{work.frontmatter.roles.join(' | ')}</h3>
                             </div>
-                            <div className="flex flex-col gap-2 items-end">
+                            <div className="flex flex-col gap-0 items-end">
                                 <h4 className="text-xl md:text-2xl text-end text-text-500 dark:text-text-400">{t('date')}</h4>
                                 <h3 className="text-xl md:text-2xl text-end">{Intl.DateTimeFormat('en-US', options).format(work.frontmatter.date)}</h3>
                             </div>
                             {work.frontmatter.collaborators === null?
                                 <></> :
-                                <div className="flex flex-col gap-2 items-end">
+                                <div className="flex flex-col gap-0 items-end">
                                     <h4 className="text-xl md:text-2xl text-end text-text-500 dark:text-text-400">{t('collaborators')}</h4>
                                     <h3 className="text-xl md:text-2xl text-end">{work.frontmatter.collaborators.join(' | ')}</h3>
                                 </div>
@@ -128,7 +128,7 @@ const WorkDetails = ({ data: { work } }: PageProps<WorkDetailsDataProps>) => {
                     <section id="hire-me">
                         <Link
                             to="/hire-me"
-                            className="flex flex-row gap-2 items-center text-xl font-medium text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
+                            className="flex flex-row gap-2 items-center text-xl !font-semibold text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
                         >
                             {t("hire_me").toUpperCase()}
                             <img src={"/3d-icons/3d-send.png"} className="h-8 w-8" />
