@@ -67,18 +67,18 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                         <GatsbyImage image={gatsbyImageData} alt="avatar" className="!absolute h-24 w-24 rounded-full inset-6" />
                         <div className="absolute h-36 w-36 fill-text-900 dark:fill-text-50 animate-spin-slow"><CircularText /></div>
                     </div>
-                    <div id="who-am-i" className="flex flex-col w-full mt-24 md:flex-row justify-between items-start md:items-end">
-                        <h1 className="text-9xl mb-4">{t('hello')}</h1>
-                        <h2 className="relative max-w-2xl w-full text-end">
+                    <div id="who-am-i" className="flex flex-col w-full mt-32 md:mt-24 gap-8 sm:gap-0 md:flex-row justify-between items-start md:items-end">
+                        <h1 className="text-9xl !font-normal">{t('hello')}</h1>
+                        <h2 className="relative max-w-2xl w-full text-3xl sm:text-2xl !font-normal text-end">
                             {t('i_am_abdelmadjid_bouikken')}<br />{t('a_software_engineer_in_paris')}
                         </h2>
                     </div>
-                    <div id="who-am-i" className="flex flex-col gap-32 w-full">
-                        <h1>{t('i_am_a_passionate_software_engineer')}</h1>
-                        <h1>{t('my_aim_is_to_create_products')}</h1>
+                    <div id="who-am-i" className="flex flex-col gap-16 md:gap-32 w-full">
+                        <h1 className="!font-normal">{t('i_am_a_passionate_software_engineer')}</h1>
+                        <h1 className="!font-normal">{t('my_aim_is_to_create_products')}</h1>
                     </div>
                     <section id="hiring-and-cv">
-                        <div className="flex flex-col md:flex-row gap-4 items-start">
+                        <div className="flex flex-col md:flex-row mb-16 gap-4 items-start">
                             <ResumeButton />
                             <Link to="/hire-me"
                                 className="flex flex-row gap-2 items-center text-xl !font-semibold text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
@@ -93,7 +93,7 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                         </div>
                     </section>
                     <section id="technical-stack" className="space-y-4 w-full">
-                        <h1>{t('technical_stack')}</h1>
+                        <h1 className="!font-semibold md:!font-extralight">{t('technical_stack')}</h1>
                         <div>
                             {
                                 Object.entries(TechnologiesByCategories).map((category) => {
@@ -117,13 +117,13 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                         </div>
                     </section>
                     <section id="experience" className="space-y-4 w-full">
-                        <h1>{t('career_journey')}</h1>
+                        <h1 className="!font-semibold md:!font-extralight">{t('career_journey')}</h1>
                         <div className="flex flex-col">
                             {
                                 experience.map((experience, index) => (
-                                    <div key={experience.frontmatter.company} className="flex flex-row items-stretch justify-stretch gap-8">
+                                    <div key={experience.frontmatter.company} className="flex flex-row items-stretch justify-stretch gap-4 md:gap-8">
                                         {/* Timeline */}
-                                        <div className="flex flex-col items-center translate-y-3">
+                                        <div className="flex flex-col items-center translate-y-[0.375rem] md:translate-y-3">
                                             <div className="rotate-45 flex my-2">
                                                 <div className="h-2 w-2 bg-primary-500 rounded-sm" />
                                             </div>
@@ -145,13 +145,13 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                         </div>
                     </section>
                     <section id="education" className="space-y-4 w-full">
-                        <h1>{t('academic_background')}</h1>
+                        <h1 className="!font-semibold md:!font-extralight">{t('academic_background')}</h1>
                         <div className="flex flex-col">
                             {
                                 education.map((education, index) => (
-                                    <div key={education.frontmatter.university} className="flex flex-row items-stretch justify-stretch gap-8">
+                                    <div key={education.frontmatter.university} className="flex flex-row items-stretch justify-stretch gap-4 md:gap-8">
                                         {/* Timeline */}
-                                        <div className="flex flex-col items-center translate-y-3">
+                                        <div className="flex flex-col items-center translate-y-[0.375rem] md:translate-y-3">
                                             <div className="rotate-45 flex my-2">
                                                 <div className="h-2 w-2 bg-primary-500 rounded-sm" />
                                             </div>
