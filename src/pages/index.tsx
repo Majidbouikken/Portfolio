@@ -9,12 +9,30 @@ import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { SEO } from "@/components/seo";
 import './index.css';
 import { IconGithub, IconLinkedin } from "@/icons";
+import WorkCard from "@/components/WorkCard";
+import useHover from "@/layout/use-hover";
+import Cursor from "@/layout/cursor";
 
 interface AboutDataProps {
     avatar: {
         childImageSharp: {
             gatsbyImageData: IGatsbyImageData
         }
+    };
+    recentWorks: {
+        nodes: {
+            frontmatter: {
+                title: string;
+                subtitle: string;
+                category: string;
+                slug: string;
+                thumb: {
+                    childImageSharp: {
+                        gatsbyImageData: IGatsbyImageData
+                    }
+                }
+            }
+        }[]
     };
     allEducation: {
         nodes: {
@@ -47,10 +65,13 @@ interface AboutDataProps {
     };
 }
 
-const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<AboutDataProps>) => {
+const HomePage = ({ data: { avatar, recentWorks, allEducation, allExperience } }: PageProps<AboutDataProps>) => {
   const { t } = useTranslation();
+//   const hoverEffect = useHover();
 
   const gatsbyImageData = avatar.childImageSharp.gatsbyImageData;
+
+  const works = recentWorks.nodes;
 
   const experience = allExperience.nodes;
   const experienceCount = allExperience.totalCount;
@@ -61,14 +82,16 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
   return (
         <Layout>
             <SEO title={t('title')} description={t('website_description')} pathname="" />
+            <Cursor />
+            {/* <div className="cursor" /> */}
             <div id="about-page" className="max-w-7xl mx-auto my-32 px-8">
                 <div className="flex flex-col items-start gap-16 md:gap-32 w-full">
                     <div className="absolute h-36 w-36 items-center justify-center justify-items-center top-24 left-1/2 -translate-x-1/2 -z-10">
                         <GatsbyImage image={gatsbyImageData} alt="avatar" className="!absolute h-24 w-24 rounded-full inset-6" />
                         <div className="absolute h-36 w-36 fill-text-900 dark:fill-text-50 animate-spin-slow"><CircularText /></div>
                     </div>
-                    <div id="who-am-i" className="flex flex-col w-full mt-32 md:mt-24 gap-8 sm:gap-0 md:flex-row justify-between items-start md:items-end">
-                        <h1 className="text-9xl !font-normal">{t('hello')}</h1>
+                    <div id="who-am-i" className="flex flex-col w-full mt-24 md:mt-12 gap-8 sm:gap-0 md:flex-row justify-between items-start md:items-end">
+                        <h1 className="text-6xl md:text-9xl !font-normal">{t('hello')}</h1>
                         <h2 className="relative max-w-2xl w-full text-3xl sm:text-2xl !font-normal text-end">
                             {t('i_am_abdelmadjid_bouikken')}<br />{t('a_software_engineer_in_paris')}
                         </h2>
@@ -90,6 +113,20 @@ const HomePage = ({ data: { avatar, allEducation, allExperience } }: PageProps<A
                                 <a href="https://www.linkedin.com/in/abdelmadjid-bouikken/" target="_blank" className="h-12 w-12 fill-text-800 dark:fill-text-50 hover:fill-white p-2 hover:bg-linkedin border-background-400/50 dark:border-background-600/50 hover:border-linkedin dark:hover:border-linkedin border-2 rounded-full"><IconLinkedin /></a>
                                 <a href="https://www.github.com/majidbouikken/" target="_blank" className="h-12 w-12 fill-text-800 dark:fill-text-50 hover:fill-white p-2 hover:bg-github border-background-400/50 dark:border-background-600/50 hover:border-github dark:hover:border-github border-2 rounded-full"><IconGithub /></a>
                             </div>
+                        </div>
+                    </section>
+                    <section id="recent-works" className="space-y-4 w-full">
+                        <h1 className="!font-semibold md:!font-extralight">{t('recent_works')}</h1>
+                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+                            { works.map((work, index) => (<WorkCard key={`work-${index}`} work={work.frontmatter}/>)) }
+                        </div>
+                        <div className="flex justify-center items-center pt-16">
+                            <Link to="/works"
+                                className="inline-flex gap-2 items-center text-xl !font-semibold text-text-800 dark:text-text-50 hover:text-text-50 bg-transparent hover:bg-primary-500 dark:bg-background-800/50 dark:hover:bg-background-800 border-2 border-background-400/50 hover:border-transparent dark:border-transparent px-4 py-2 rounded-full transition-colors duration-500"
+                            >
+                                SEE ALL MY WORKS
+                                <img src={"/3d-icons/3d-works.png"} className="h-8 w-8" />
+                            </Link>
                         </div>
                     </section>
                     <section id="technical-stack" className="space-y-4 w-full">
@@ -194,6 +231,26 @@ query ($language: String!) {
     avatar: file(relativePath: {eq: "me.jpg"}) {
         childImageSharp {
             gatsbyImageData
+        }
+    }
+
+    recentWorks: allMarkdownRemark(
+        sort: {frontmatter: {date: DESC}}
+        filter: {frontmatter: {language: {eq: "en"}}, fileAbsolutePath: {regex: "/works/"}}
+        limit: 4
+    ) {
+        nodes {
+            frontmatter {
+                title
+                subtitle
+                category
+                slug
+                thumb {
+                    childImageSharp {
+                        gatsbyImageData
+                    }
+                }
+            }
         }
     }
 

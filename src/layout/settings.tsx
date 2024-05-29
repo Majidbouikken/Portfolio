@@ -61,25 +61,25 @@ const Settings: React.FC = () => {
       <div className="absolute w-80 md:w-64 top-full -end-4 p-4 transition-all opacity-0 group-hover:opacity-100 -translate-y-4 group-hover:translate-y-0 duration-300 pointer-events-none group-hover:pointer-events-auto">
         <div className="flex flex-col py-4 bg-background-200 dark:bg-background-800 border-background-400 dark:border-background-600 border-2 rounded-3xl backdrop-blur-md z-20">
           <div className="flex md:hidden flex-col">
-            <Link to="/" className={`flex flex-row justify-start items-center gap-4 px-4 py-2 text-sm font-semibold ${(location.pathname === '/')? 'text-primary-500 dark:text-text-50': 'text-text-500 dark:text-text-400'}`}>
-              <img src="/3d-icons/3d-home.png" className="h-8 w-8" />
+            <Link to="/" className={`flex flex-row justify-start items-center gap-4 px-4 py-2 text-md font-semibold ${(location.pathname === '/')? 'text-primary-500 dark:text-text-50': 'text-text-500 dark:text-text-400'}`}>
+              <img src="/3d-icons/3d-home.png" className="h-6 w-6" />
               {t("home")}
             </Link>
-            <div className="divider-horizontal my-4" />
             <Link
               key="works"
               to="/works"
               rel="preload"
-              className={`flex flex-row justify-start gap-4 px-4 py-2 text-sm font-semibold ${
+              className={`flex flex-row justify-start gap-4 px-4 py-2 text-md font-semibold ${
                 (location.pathname.includes('works/')) ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-400 dark:hover:text-text-50' : 'text-text-500 dark:text-text-400 hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
               }`}
             >
+              <img src="/3d-icons/3d-works.png" className="h-6 w-6" />
               {t("works")}
             </Link>
             {/* <Link
               key="about"
               to="/about"
-              className={`flex flex-row justify-start gap-4 px-4 py-2 text-sm font-semibold ${
+              className={`flex flex-row justify-start gap-4 px-4 py-2 text-md font-semibold ${
                 (location.pathname.includes('about/')) ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-500 dark:hover:text-text-50' : 'text-text-500 dark:text-text-400 hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
               }`}
             >
@@ -89,10 +89,11 @@ const Settings: React.FC = () => {
               key="hire-me"
               to="/hire-me"
               rel="preload"
-              className={`flex flex-row justify-start gap-4 px-4 py-2 text-sm font-semibold ${
+              className={`flex flex-row justify-start gap-4 px-4 py-2 text-md font-semibold ${
                 (location.pathname.includes('hire-me/')) ? 'text-primary-500 hover:bg-background-400 dark:hover:bg-background-600 hover:text-primary-500 dark:hover:text-text-50' : 'text-text-500 dark:text-text-400 hover:bg-background-400 dark:hover:bg-background-600 hover:text-text-900 dark:hover:text-text-50'
               }`}
             >
+              <img src="/3d-icons/3d-send.png" className="h-6 w-6" />
               {t("hire_me")}
             </Link>
             <div className="divider-horizontal my-4" />
