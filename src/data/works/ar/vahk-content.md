@@ -12,6 +12,7 @@ technologies:
   - Dart
   - Adobe XD
 thumb: ../../../images/thumbnails/vahk.png
+video: https://www.youtube.com/embed/Kk7ZHqRtyQk?si=VJIY3t_bO2uYN7od
 slug: vahk
 language: ar
 ---

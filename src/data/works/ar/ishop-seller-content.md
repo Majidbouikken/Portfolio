@@ -15,6 +15,7 @@ technologies:
   - Typescript
   - MongoDB
 thumb: ../../../images/thumbnails/ishop-seller.png
+video: https://www.youtube.com/embed/LFyB2cJ3C-4?si=OrnajU9vEUnDPh9e
 featuredimage:
   - ../../../images/gallery/ishop-seller-image-1.jpg
   - ../../../images/gallery/ishop-seller-image-2.jpg

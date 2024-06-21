@@ -18,6 +18,7 @@ technologies:
   - Python
   - OpenCV
 thumb: ../../../images/thumbnails/pain-pain-go-away.png
+video: https://www.youtube.com/embed/6hXpZ9OGbNY?si=ntFaIv3XgpDhqG-3
 slug: pain-pain-go-away
 language: en
 ---
