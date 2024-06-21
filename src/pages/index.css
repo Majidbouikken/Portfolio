@@ -120,6 +120,9 @@ button {
   }
 }
 
+iframe {
+}
+
 /* Scrollbar customization*/
 ::-webkit-scrollbar {
   width: 4px;

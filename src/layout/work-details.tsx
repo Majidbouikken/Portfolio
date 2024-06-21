@@ -22,6 +22,7 @@ interface WorkDetailsDataProps {
             awards: string[];
             technologies: string[];
             description: string;
+            video: string;
             slug: string;
             featuredimage: {
                 childImageSharp: {
@@ -93,23 +94,18 @@ const WorkDetails = ({ data: { work } }: PageProps<WorkDetailsDataProps>) => {
                         ))}
                     </div>
                     <ArticleComponent content={work.rawMarkdownBody} />
-
-                    {false? (
+                    {work.frontmatter.video? (
                         <>
                             <div className="divider-horizontal" />
                             <h2 id="demo-video" className="text-5xl max-w-5xl scroll-mt-28">{t('demo_video')}</h2>
-                            {/* <LazyLoad className="max-h-96 w-full md:w-2/3 lg:w-1/2 mx-auto z-0" offset={100}>
-                                <ReactPlayer
-                                    url={workDetails.video}
-                                    controls
-                                    width="100%"
-                                    height="24rem"
-                                />
-                            </LazyLoad> */
-                            // <video className="aspect-video h-64" preload='auto' controls>
-                            //     <source className="aspect-video h-64" src={require("../videos/ishopDemo.mp4")} type="video/mp4" />
-                            // </video>
-                            }
+                            <iframe
+                                className="mx-auto h-96 aspect-video"
+                                src={work.frontmatter.video}
+                                title=""
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                            />
                         </>) :
                         <></>
                     }
@@ -154,6 +150,7 @@ query ($language: String!, $slug: String!) {
             category
             awards
             description
+            video
             featuredimage {
                 childImageSharp {
                     gatsbyImageData

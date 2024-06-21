@@ -21,6 +21,7 @@ technologies:
   - MongoDB
   - Azure
 thumb: ../../../images/thumbnails/el-waseel.png
+video: https://www.youtube.com/embed/l4AB990C2jo?si=prZ-Uj5Qmh0Fbf_-
 slug: el-waseel
 language: de
 ---
