@@ -1,9 +1,9 @@
 ---
-title: مهندس برمجيات متدرب
+title: مهندس برمجيات 
 company: GoldenCORP
 location: الجزائر، الجزائر
-startDate: 2020-05-01
-endDate: 2020-12-01
+startDate: 2020-10-01
+endDate: 2022-07-01
 contractType: تدريب
 companyWebsite: https://www.goldencorp.net/
 description: "• عملت على تطبيق Linble، وهو تطبيق محمول يهدف إلى ربط المتطوعين والأشخاص الذين يعانون من ضعف جزئي في البصر الذين يحتاجون إلى مساعدة لإكمال مهامهم اليومية
@@ -13,4 +13,4 @@ description: "• عملت على تطبيق Linble، وهو تطبيق محمو
 language: ar
 ---
 
-# مهندس برمجيات متدرب، GoldenCORP
+# مهندس برمجيات  GoldenCORP

@@ -1,9 +1,9 @@
 ---
-title: Softwareentwickler Praktikant
+title: Softwareentwickler
 company: GoldenCORP
 location: Algier, Algerien
-startDate: 2020-05-01
-endDate: 2020-12-01
+startDate: 2020-10-01
+endDate: 2022-07-01
 contractType: Praktikum
 companyWebsite: https://www.goldencorp.net/
 description: "• Ich habe an Linble gearbeitet, einer mobilen Anwendung, die darauf abzielt, Freiwillige und teilweise blinde Menschen miteinander zu verbinden, die Hilfe benötigen, um ihre täglichen Aufgaben zu erledigen
@@ -13,4 +13,4 @@ description: "• Ich habe an Linble gearbeitet, einer mobilen Anwendung, die da
 language: de
 ---
 
-# Softwareentwickler Praktikant, GoldenCORP
+# Softwareentwickler, GoldenCORP

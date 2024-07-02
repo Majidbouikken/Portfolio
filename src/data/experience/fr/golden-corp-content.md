@@ -1,15 +1,14 @@
 ---
-title: Ingénieur Logiciel Stagiaire
+title: Ingénieur Logiciel Java
 company: GoldenCORP
 location: Alger, Algérie
-startDate: 2020-05-01
-endDate: 2020-12-01
+startDate: 2020-10-01
+endDate: 2022-07-01
 contractType: Stage
 companyWebsite: https://www.goldencorp.net/
-description: "• J'ai travaillé sur Linble, une application mobile qui vise à mettre en relation des bénévoles et des personnes partiellement aveugles ayant besoin d'aide pour accomplir leurs tâches quotidiennes
-• J'ai proposé un design complet de l'interface utilisateur pour la solution (à l'aide de Adobe XD)
-• J'ai développé l'application mobile en partant de zéro, en suivant le design d'interface utilisateur (à l'aide de Flutter)
-• J'ai participé au développement de la partie backend de l'application et j'ai traité certaines demandes (Express.js et MongoDB)"
+description: "• Contribution à une variété de projets logicielsDéveloppement et déploiement d'applications web robustes utilisant des technologies telles que SpringBoot Java,JEE, React.js et Angular côté frontend, et Symfony, Node.js et Spring Boot côté backend.
+• Conception et mise en œuvre d'architectures de bases de données évolutives utilisant des bases de données SQLet NoSQL comme MongoDB, garantissant une gestion ecace des données.
+• Aider les membres de l'équipe à améliorer leurs compétences grâce à la programmation par les pairs, orant ainsiplus de valeur aux clients."
 language: fr
 ---
 
