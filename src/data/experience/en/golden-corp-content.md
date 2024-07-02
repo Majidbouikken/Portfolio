@@ -1,10 +1,10 @@
 ---
-title: Software Engineer
+title: Java Software Engineer
 company: GoldenCORP
 location: Algiers, Algeria
 startDate: 2020-10-01
 endDate: 2022-07-01
-contractType: Internship
+contractType: CDI
 companyWebsite: https://www.goldencorp.net/
 description: "• Contribution à une variété de projets logicielsDéveloppement et déploiement d'applications web robustes utilisant des technologies telles que SpringBoot Java,JEE, React.js et Angular côté frontend, et Symfony, Node.js et Spring Boot côté backend.
 • Conception et mise en œuvre d'architectures de bases de données évolutives utilisant des bases de données SQLet NoSQL comme MongoDB, garantissant une gestion ecace des données.

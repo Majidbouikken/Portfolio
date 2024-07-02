@@ -2,8 +2,8 @@
 title: مهندس برمجيات
 company: LIRMM - Laboratoire d'informatique، de robotique et de microélectronique de Montpellier
 location: مونبلييه، فرنسا
-startDate: 2022-02-01
-endDate: 2022-09-01
+startDate: 2020-02-01
+endDate: 2020-09-01
 contractType: تدريب
 companyWebsite: https://www.lirmm.fr/
 description: "• إعادة هيكلة كود تطبيق خادم Spring Boot

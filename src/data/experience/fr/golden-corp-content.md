@@ -1,5 +1,5 @@
 ---
-title: Ingénieur Logiciel Stagiaire
+title: Ingénieur Logiciel Java
 company: GoldenCORP
 location: Alger, Algérie
 startDate: 2020-10-01
