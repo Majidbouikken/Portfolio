@@ -2,8 +2,8 @@
 title: Ingénieur Logiciel
 company: LIRMM - Laboratoire d'informatique, de robotique et de microélectronique de Montpellier
 location: Montpellier, France
-startDate: 2022-02-01
-endDate: 2022-09-01
+startDate: 2020-02-01
+endDate: 2020-09-01
 contractType: Stage
 companyWebsite: https://www.lirmm.fr/
 description: "• Refactoring du code d'une application serveur Spring Boot
