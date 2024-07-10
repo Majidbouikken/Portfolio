@@ -33,13 +33,13 @@ const config: GatsbyConfig = {
         name: `locale`
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/downloadable`,
-        name: `downloadable`
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/downloadable`,
+    //     name: `downloadable`
+    //   },
+    // },
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
